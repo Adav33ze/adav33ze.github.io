@@ -50,6 +50,10 @@
         <!-- script
         ================================================== -->
         <script src="js/modernizr.js"></script>
+
+        <!-- Netlify Identity
+        ================================================== -->
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     
         <!-- favicons
         ================================================== -->
@@ -895,5 +899,19 @@ line with statutory approvals and development. Working with environmental consul
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Netlify Identity Init
+    ================================================== -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
 
 </body>
