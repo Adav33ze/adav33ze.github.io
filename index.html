@@ -476,8 +476,40 @@ line with statutory approvals and development. Working with environmental consul
             </div>
         </div> <!-- s-porfolio__header -->
 
-        <div class="row s-porfolio__list block-large-1-2 block-tab-full collapse">
+        <div id="portfolio-list" class="row s-porfolio__list block-large-1-2 block-tab-full collapse">
+            <!-- Portfolio items loaded dynamically from data/portfolio.json -->
+        </div> <!-- folio-list -->
 
+        <script>
+            fetch('/data/portfolio.json')
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    var container = document.getElementById('portfolio-list');
+                    data.projects.forEach(function(p) {
+                        var col = document.createElement('div');
+                        col.className = 'column';
+                        col.setAttribute('data-aos', 'fade-up');
+                        col.innerHTML =
+                            '<div class="folio-item">' +
+                                '<div class="folio-item__thumb">' +
+                                    '<a class="folio-item__thumb-link" href="' + p.gallery_image + '" title="' + p.title + '" data-size="1050x700">' +
+                                        '<img src="' + p.image + '" alt="' + p.title + '">' +
+                                    '</a>' +
+                                '</div>' +
+                                '<div class="folio-item__info">' +
+                                    '<div class="folio-item__cat">' + p.category + '</div>' +
+                                    '<h4 class="folio-item__title">' + p.title + '</h4>' +
+                                '</div>' +
+                                '<div class="folio-item__caption"><p>' + p.description + '</p></div>' +
+                            '</div>';
+                        container.appendChild(col);
+                    });
+                })
+                .catch(function(e) { console.error('Portfolio load error:', e); });
+        </script>
+
+        <!-- REMOVED: old hardcoded items below, now loaded from data/portfolio.json -->
+        <!--PORTFOLIOSTART
             <div class="column" data-aos="fade-up">
                 <div class="folio-item">
                     <div class="folio-item__thumb">
@@ -670,7 +702,7 @@ line with statutory approvals and development. Working with environmental consul
                 </div>
             </div> <!-- end column -->
 
-        </div> <!-- folio-list -->
+        PORTFOLIOEND-->
 
     </section> <!-- end portfolio -->
 

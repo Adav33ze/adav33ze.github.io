@@ -1,0 +1,74 @@
+{
+  "projects": [
+    {
+      "title": "Property Development",
+      "category": "Architectural Visualization",
+      "image": "images/portfolio/Reliabuild 1x.jpg",
+      "gallery_image": "images/portfolio/gallery/Reliabuild 1.png",
+      "description": "Architectural Visualization for one of Abuja's Foremost Real Estate developers"
+    },
+    {
+      "title": "5 Bedroom Private Home",
+      "category": "Architectural Design",
+      "image": "images/portfolio/5 Bed 1x.png",
+      "gallery_image": "images/portfolio/gallery/5 Bed.png",
+      "description": "A 5 Bedroom Family home, currently under construction in Kaduna state."
+    },
+    {
+      "title": "4 Bedroom Chalet",
+      "category": "Architectural Design and Visualization",
+      "image": "images/portfolio/gallery/CHalet type two Night.jpg",
+      "gallery_image": "images/portfolio/gallery/Chalet Type 2 I.png",
+      "description": "A 4 Bedroom Chalet, Facade Design, and 3D render."
+    },
+    {
+      "title": "Villa QAG",
+      "category": "Architectural Design and Visualization",
+      "image": "images/portfolio/Pram Pram.jpg",
+      "gallery_image": "images/portfolio/gallery/QAG Villa 2x.jpg",
+      "description": "A residential complex development by the Jabi Lake."
+    },
+    {
+      "title": "Apartment QAG",
+      "category": "Architectural Visualization",
+      "image": "images/portfolio/Apartment JAbi Lake.png",
+      "gallery_image": "images/portfolio/gallery/Apartment 4 .jpg",
+      "description": "Apartment Building Visualisation along Jabi Lake"
+    },
+    {
+      "title": "Nagwamatse Villa",
+      "category": "Architectural Consultancy",
+      "image": "images/portfolio/Mayn Mockup 1x.jpg",
+      "gallery_image": "images/portfolio/gallery/Nagwamatse Villa 2x.jpg",
+      "description": "Residential Design, Visualization and Construction Supervision."
+    },
+    {
+      "title": "Interior Design and Render",
+      "category": "Interior and Furniture Design",
+      "image": "images/portfolio/Interior 1x.jpg",
+      "gallery_image": "images/portfolio/Interior 1x (2).jpg",
+      "description": "Budget Centric Interior Design and Render"
+    },
+    {
+      "title": "Villa Q",
+      "category": "Curb Appeal and Architectural Visualization",
+      "image": "images/portfolio/Kitchen 2.png",
+      "gallery_image": "images/portfolio/gallery/Kitchen.png",
+      "description": "Curb Appeal Design and Architectural Visualization"
+    },
+    {
+      "title": "Chalet Q",
+      "category": "Architectural Visualisation and Landscaping",
+      "image": "images/portfolio/Chalet Type 1 small - Copy.png",
+      "gallery_image": "images/portfolio/gallery/Chalet Type One 2x.png",
+      "description": "Selection of paint finishes, landscape elements and Architectural Visualization"
+    },
+    {
+      "title": "Maitama Villa",
+      "category": "Architectural Design and Visualization",
+      "image": "images/portfolio/Place 3 Villa 2x.jpg",
+      "gallery_image": "images/portfolio/gallery/Place 3 Villa 2.png",
+      "description": "Curb Appeal Design and Architectural Visualization"
+    }
+  ]
+}
