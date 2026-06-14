@@ -5,6 +5,12 @@ backend:
 media_folder: "images/portfolio"
 public_folder: "images/portfolio"
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dbttnjufx
+    upload_preset: portfolio
+
 collections:
   - name: "portfolio_data"
     label: "Portfolio"
