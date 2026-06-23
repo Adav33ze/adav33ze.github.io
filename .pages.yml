@@ -1,6 +1,6 @@
 media:
-  input: public
-  output: /
+  input: public/images/portfolio
+  output: /images/portfolio
   url: https://adav33ze.com
 
 content:
