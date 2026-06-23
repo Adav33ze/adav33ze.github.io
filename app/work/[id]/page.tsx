@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps) {
     (p: any) => p.id === id || p.slug === id || slugify(p.title) === id
   )
   return {
-    title: project ? `${project.title} — adav33ze` : 'Project — adav33ze',
+    title: project ? `${project.title} — Abdulrahman` : 'Project — Abdulrahman',
     description: project?.description,
   }
 }
@@ -40,15 +40,14 @@ export default async function ProjectPage({ params }: PageProps) {
     ? (portfolioData.projects[projectIndex + 1] as any)
     : null
 
-  // Only show write_up if it has real content (not a TODO placeholder)
   const hasWriteUp = project?.write_up && !project.write_up.startsWith('TODO')
 
   if (!project) {
     return (
       <div className="min-h-screen bg-white text-black flex flex-col items-center justify-center p-6">
         <h1 className="font-display text-2xl font-light mb-4">Project Not Found</h1>
-        <Link href="/" className="text-xs uppercase tracking-widest border-b border-black pb-1">
-          Return to Index
+        <Link href="/work" className="text-xs uppercase tracking-widest border-b border-black pb-1">
+          Return to Work
         </Link>
       </div>
     )
@@ -58,16 +57,17 @@ export default async function ProjectPage({ params }: PageProps) {
     <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white">
 
       {/* NAV */}
-      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-8 md:px-12 bg-transparent">
+      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-8 md:px-12 mix-blend-difference">
         <Link
-          href="/#work"
-          className="text-xs uppercase tracking-widest text-white hover:opacity-50 transition-opacity mix-blend-difference"
+          href="/"
+          className="text-xs uppercase tracking-widest text-white hover:opacity-50 transition-opacity"
         >
-          ← Index
+          Abdulrahman
         </Link>
-        <span className="text-xs font-light text-white opacity-60 mix-blend-difference">
-          {project.category}
-        </span>
+        <div className="flex gap-8 text-xs uppercase tracking-widest text-white">
+          <Link href="/work" className="hover:opacity-50 transition-opacity">Work</Link>
+          <Link href="/about" className="hover:opacity-50 transition-opacity">About</Link>
+        </div>
       </nav>
 
       {/* HERO */}
@@ -81,7 +81,6 @@ export default async function ProjectPage({ params }: PageProps) {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-
         <div className="relative z-10 max-w-4xl text-white">
           <p className="text-xs uppercase tracking-widest text-zinc-400 mb-3">{project.location}</p>
           <h1 className="font-display text-4xl md:text-7xl font-light tracking-tight">
@@ -92,8 +91,6 @@ export default async function ProjectPage({ params }: PageProps) {
 
       {/* METADATA + OVERVIEW */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
-        {/* Left: metadata */}
         <div className="lg:col-span-4 border-t border-zinc-200 pt-8 space-y-6 text-xs uppercase tracking-wider">
           <div>
             <p className="text-zinc-400 mb-1">Location</p>
@@ -110,8 +107,6 @@ export default async function ProjectPage({ params }: PageProps) {
             </div>
           )}
         </div>
-
-        {/* Right: overview */}
         <div className="lg:col-span-8 border-t border-zinc-200 pt-8">
           <h2 className="text-xs uppercase tracking-widest text-zinc-400 mb-6">Project Overview</h2>
           <p className="font-body text-base md:text-xl font-light leading-relaxed text-zinc-800 max-w-3xl">
@@ -120,7 +115,7 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* WRITE-UP — only rendered if content exists */}
+      {/* WRITE-UP */}
       {hasWriteUp && (
         <section className="py-16 px-6 md:px-12 bg-zinc-50 border-t border-zinc-200">
           <div className="max-w-3xl mx-auto">
@@ -142,7 +137,6 @@ export default async function ProjectPage({ params }: PageProps) {
           <h2 className="text-xs uppercase tracking-widest text-zinc-400 mb-12 border-t border-zinc-200 pt-8">
             Project Images
           </h2>
-
           <div className="space-y-6">
             {project.gallery.map((item: any, i: number) => (
               <div
@@ -163,7 +157,7 @@ export default async function ProjectPage({ params }: PageProps) {
         </section>
       )}
 
-      {/* PREV / NEXT PROJECT NAVIGATION */}
+      {/* PREV / NEXT */}
       <nav className="border-t border-zinc-200 px-6 md:px-12 py-16 max-w-7xl mx-auto">
         <p className="text-xs uppercase tracking-widest text-zinc-400 mb-10">More Projects</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -196,10 +190,8 @@ export default async function ProjectPage({ params }: PageProps) {
 
       {/* FOOTER */}
       <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12 flex justify-between items-center">
-        <Link href="/#work" className="hover:text-white transition-colors">
-          Close Project
-        </Link>
-        <p>© 2026 adav33ze. All rights reserved.</p>
+        <Link href="/work" className="hover:text-white transition-colors">← All Work</Link>
+        <p>© 2026 Abdulrahman. All rights reserved.</p>
       </footer>
 
     </div>

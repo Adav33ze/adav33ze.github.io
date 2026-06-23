@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params
   const post = blogData.posts.find((p) => p.slug === slug)
   return {
-    title: post ? `${post.title} — adav33ze` : 'Post Not Found — adav33ze',
+    title: post ? `${post.title} — Abdulrahman` : 'Post Not Found — Abdulrahman',
     description: post?.excerpt,
   }
 }
@@ -36,7 +36,6 @@ export default async function BlogPostPage({ params }: PageProps) {
     )
   }
 
-  // Split body into paragraphs
   const paragraphs = post.body.split('\n\n').filter(Boolean)
 
   return (
@@ -44,50 +43,41 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       {/* NAV */}
       <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-8 md:px-12 bg-white/90 backdrop-blur-sm border-b border-zinc-100">
-        <Link href="/blog" className="text-xs uppercase tracking-widest text-black hover:opacity-50 transition-opacity">
-          ← Journal
+        <Link href="/" className="text-xs uppercase tracking-widest text-black hover:opacity-50 transition-opacity">
+          Abdulrahman
         </Link>
-        <Link href="/" className="text-xs uppercase tracking-widest text-zinc-400 hover:text-black transition-colors">
-          adav33ze
-        </Link>
+        <div className="flex gap-8 text-xs uppercase tracking-widest text-black">
+          <Link href="/work" className="hover:opacity-50 transition-opacity">Work</Link>
+          <Link href="/about" className="hover:opacity-50 transition-opacity">About</Link>
+        </div>
       </nav>
 
       {/* ARTICLE */}
       <article className="pt-40 pb-24 px-6 md:px-12">
-        
-        {/* Header */}
         <header className="max-w-3xl mx-auto mb-16 pb-12 border-b border-zinc-200">
           <div className="flex items-center gap-6 mb-8 text-xs uppercase tracking-widest text-zinc-400">
-            <span>{post.date}</span>
+            <Link href="/blog" className="hover:text-black transition-colors">← Journal</Link>
             <span className="w-8 h-px bg-zinc-300 inline-block" />
-            <span>Journal</span>
+            <span>{post.date}</span>
           </div>
           <h1 className="font-display text-4xl md:text-6xl font-light tracking-tight leading-tight">
             {post.title}
           </h1>
         </header>
 
-        {/* Body */}
         <div className="max-w-3xl mx-auto space-y-6">
-          {/* Excerpt as lead paragraph */}
           <p className="font-body text-base md:text-xl font-light leading-relaxed text-zinc-700">
             {post.excerpt}
           </p>
-
-          {/* Remaining paragraphs */}
           {paragraphs.map((paragraph, i) => (
-            <p
-              key={i}
-              className="font-body text-sm md:text-base font-light leading-relaxed text-zinc-600"
-            >
+            <p key={i} className="font-body text-sm md:text-base font-light leading-relaxed text-zinc-600">
               {paragraph}
             </p>
           ))}
         </div>
-
       </article>
 
-      {/* PREV / NEXT NAVIGATION */}
+      {/* PREV / NEXT */}
       <nav className="border-t border-zinc-200 px-6 md:px-12 py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
@@ -111,7 +101,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       {/* FOOTER */}
       <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12 flex justify-between items-center">
-        <p>© 2026 adav33ze. All rights reserved.</p>
+        <p>© 2026 Abdulrahman. All rights reserved.</p>
         <Link href="/blog" className="hover:text-white transition-colors">Back to Journal</Link>
       </footer>
 

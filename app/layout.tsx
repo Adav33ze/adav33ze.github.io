@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Cormorant_Garamond } from 'next/font/google'
-import './globals.css' // <-- This line connects your styling engine!
+import './globals.css'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,8 +14,8 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'adav33ze | Architecture & Interior Design Studio',
-  description: 'Minimalist architecture and premium interior design practice based in Abuja, Nigeria.',
+  title: 'Abdulrahman — Architect & Interior Designer',
+  description: 'Abdulrahman is an Architect and Interior Designer based in Abuja, Nigeria, working across residential, hospitality, and institutional projects. Available for collaborations locally and internationally.',
 }
 
 export default function RootLayout({
