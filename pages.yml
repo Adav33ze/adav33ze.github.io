@@ -1,0 +1,81 @@
+media:
+  input: public/images/portfolio
+  output: images/portfolio
+
+content:
+  - name: portfolio
+    label: Portfolio Projects
+    type: file
+    path: data/portfolio.json
+    format: json
+    fields:
+      - name: projects
+        label: My Projects
+        type: object
+        list: true
+        fields:
+          - name: slug
+            label: URL Slug (e.g. villa-qag-jabi-lake)
+            type: string
+          - name: title
+            label: Project Title
+            type: string
+          - name: category
+            label: Category (e.g. Architectural Visualization)
+            type: string
+          - name: location
+            label: Location
+            type: string
+          - name: year
+            label: Year Completed (e.g. 2024)
+            type: string
+          - name: image
+            label: Cover Image (shown in grid)
+            type: image
+          - name: alt_text
+            label: Cover Image Alt Text (for SEO)
+            type: string
+          - name: description
+            label: Short Description (shown on project page)
+            type: text
+          - name: write_up
+            label: Project Write-up (shown on project page)
+            type: rich-text
+          - name: gallery
+            label: Gallery Images (shown on project page)
+            type: object
+            list: true
+            fields:
+              - name: image
+                label: Image
+                type: image
+              - name: alt_text
+                label: Alt Text (for SEO)
+                type: string
+
+  - name: blog
+    label: Journal Posts
+    type: file
+    path: data/blog.json
+    format: json
+    fields:
+      - name: posts
+        label: My Posts
+        type: object
+        list: true
+        fields:
+          - name: slug
+            label: URL Slug (e.g. designing-for-abujas-climate)
+            type: string
+          - name: title
+            label: Post Title
+            type: string
+          - name: date
+            label: Display Date (e.g. Jan 2026)
+            type: string
+          - name: excerpt
+            label: Short Excerpt (shown in journal list)
+            type: text
+          - name: body
+            label: Post Body (separate paragraphs with a blank line)
+            type: rich-text

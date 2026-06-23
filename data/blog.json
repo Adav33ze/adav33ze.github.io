@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "slug": "designing-for-abujas-climate",
+      "title": "Designing for Abuja's Climate",
+      "date": "Jan 2026",
+      "excerpt": "Placeholder excerpt \u2014 notes on orientation, shading, and material choices for Abuja's heat and harmattan dust.",
+      "body": "Replace this placeholder text with a real post. A short paragraph on how orientation and shading shape early design decisions in Abuja's climate.\n\nA second paragraph on material choices \u2014 what holds up to heat, humidity swings, and harmattan dust, and what doesn't.\n\nA closing paragraph with a practical takeaway for clients planning a build."
+    },
+    {
+      "slug": "from-concept-to-construction",
+      "title": "From Concept to Construction: What Clients Should Expect",
+      "date": "Feb 2026",
+      "excerpt": "Placeholder excerpt \u2014 a plain-language walk-through of the design and approvals process from first sketch to handover.",
+      "body": "Replace this placeholder text with a real post. Outline the stages a client moves through \u2014 concept, statutory approvals, construction documentation, site delivery.\n\nNote what's expected of the client at each stage, and roughly how long each phase tends to take."
+    },
+    {
+      "slug": "notes-on-material-choices",
+      "title": "Notes on Material Choices for Tropical Interiors",
+      "date": "Mar 2026",
+      "excerpt": "Placeholder excerpt \u2014 thoughts on finishes and furnishings that age well in a tropical interior.",
+      "body": "Replace this placeholder text with a real post about material choices for tropical interiors \u2014 finishes, fabrics, and furnishings that hold up over time."
+    }
+  ]
+}
