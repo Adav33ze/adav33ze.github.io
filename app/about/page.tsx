@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import NavBar from '../components/NavBar'
-import profileData from '../data/profile.json'
 
 export const metadata = {
   title: 'About — Abdulrahman | Architect & Interior Designer',
@@ -83,7 +82,7 @@ export default function AboutPage() {
               Abdulrahman
             </h1>
             <p className="font-body text-xs uppercase tracking-widest text-zinc-400 mt-4">
-              Architect & Interior Designer 
+              Architect & Interior Designer — Abuja, Nigeria
             </p>
           </div>
           <div className="lg:col-span-4 space-y-3 text-xs uppercase tracking-wider text-zinc-400">
@@ -97,8 +96,8 @@ export default function AboutPage() {
             </div>
             <div>
               <span className="text-zinc-300">Contact</span>
-              <a href="mailto:hello@adav33ze.com" className="ml-3 text-black hover:opacity-50 transition-opacity">
-                hello@adav33ze.com
+              <a href="mailto:hello@adav33ze.com.ng" className="ml-3 text-black hover:opacity-50 transition-opacity">
+                hello@adav33ze.com.ng
               </a>
             </div>
           </div>
@@ -125,7 +124,7 @@ export default function AboutPage() {
               building a track record in residential, hospitality, and institutional work.
             </p>
             <p>
-              Adavize — meaning "bringer of wealth" — is my personal brand. A name that reflects 
+              adav33ze — meaning "bringer of wealth" — is my personal brand. A name that reflects 
               the value I aim to bring to every project and collaboration. I work with clients 
               across Nigeria and internationally, and I'm always open to meaningful projects 
               regardless of where they are.
