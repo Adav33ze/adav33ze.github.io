@@ -1,8 +1,54 @@
 media:
-  input: public/images/portfolio
-  output: images/portfolio
+  input: public
+  output: /
+  url: https://adav33ze.com
 
 content:
+  - name: hero
+    label: Homepage Hero
+    type: file
+    path: data/hero.json
+    format: json
+    fields:
+      - name: mode
+        label: Hero Mode
+        type: select
+        options:
+          - label: Single Image
+            value: single
+          - label: Slideshow
+            value: slideshow
+      - name: image
+        label: Single Image (used when mode is Single Image)
+        type: image
+      - name: alt
+        label: Single Image Alt Text
+        type: string
+      - name: slides
+        label: Slideshow Images (used when mode is Slideshow)
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Image
+            type: image
+          - name: alt
+            label: Alt Text
+            type: string
+
+  - name: profile
+    label: Profile Image
+    type: file
+    path: data/profile.json
+    format: json
+    fields:
+      - name: image
+        label: Profile Photo
+        type: image
+      - name: alt
+        label: Image Alt Text
+        type: string
+
   - name: portfolio
     label: Portfolio Projects
     type: file

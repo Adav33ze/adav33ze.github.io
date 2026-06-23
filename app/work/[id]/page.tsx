@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import NavBar from '../../components/NavBar'
 import Image from 'next/image'
 import portfolioData from '../../../data/portfolio.json'
 
@@ -55,20 +56,8 @@ export default async function ProjectPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white">
-
       {/* NAV */}
-      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-8 md:px-12 mix-blend-difference">
-        <Link
-          href="/"
-          className="text-xs uppercase tracking-widest text-white hover:opacity-50 transition-opacity"
-        >
-          Abdulrahman
-        </Link>
-        <div className="flex gap-8 text-xs uppercase tracking-widest text-white">
-          <Link href="/work" className="hover:opacity-50 transition-opacity">Work</Link>
-          <Link href="/about" className="hover:opacity-50 transition-opacity">About</Link>
-        </div>
-      </nav>
+      <NavBar forceLight />
 
       {/* HERO */}
       <section className="relative h-[88vh] w-full bg-zinc-900 overflow-hidden flex items-end p-6 md:p-12">

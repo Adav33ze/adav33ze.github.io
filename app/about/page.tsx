@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import NavBar from '../components/NavBar'
+import profileData from '../data/profile.json'
 
 export const metadata = {
   title: 'About — Abdulrahman | Architect & Interior Designer',
@@ -69,17 +71,8 @@ const services = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white">
-
       {/* NAV */}
-      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-8 md:px-12 bg-white/90 backdrop-blur-sm border-b border-zinc-100">
-        <Link href="/" className="text-xs uppercase tracking-widest text-black hover:opacity-50 transition-opacity">
-          Abdulrahman
-        </Link>
-        <div className="flex gap-8 text-xs uppercase tracking-widest text-black">
-          <Link href="/work" className="hover:opacity-50 transition-opacity">Work</Link>
-          <Link href="/about" className="opacity-50">About</Link>
-        </div>
-      </nav>
+      <NavBar forceLight />
 
       {/* HEADER */}
       <header className="pt-40 pb-16 px-6 md:px-12 border-b border-zinc-200">
@@ -90,7 +83,7 @@ export default function AboutPage() {
               Abdulrahman
             </h1>
             <p className="font-body text-xs uppercase tracking-widest text-zinc-400 mt-4">
-              Architect & Interior Designer — Abuja, Nigeria
+              Architect & Interior Designer 
             </p>
           </div>
           <div className="lg:col-span-4 space-y-3 text-xs uppercase tracking-wider text-zinc-400">
@@ -104,8 +97,8 @@ export default function AboutPage() {
             </div>
             <div>
               <span className="text-zinc-300">Contact</span>
-              <a href="mailto:hello@adav33ze.com.ng" className="ml-3 text-black hover:opacity-50 transition-opacity">
-                hello@adav33ze.com.ng
+              <a href="mailto:hello@adav33ze.com" className="ml-3 text-black hover:opacity-50 transition-opacity">
+                hello@adav33ze.com
               </a>
             </div>
           </div>
@@ -132,7 +125,7 @@ export default function AboutPage() {
               building a track record in residential, hospitality, and institutional work.
             </p>
             <p>
-              adav33ze — meaning "bringer of wealth" — is my personal brand. A name that reflects 
+              Adavize — meaning "bringer of wealth" — is my personal brand. A name that reflects 
               the value I aim to bring to every project and collaboration. I work with clients 
               across Nigeria and internationally, and I'm always open to meaningful projects 
               regardless of where they are.

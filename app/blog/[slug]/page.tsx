@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import NavBar from '../../components/NavBar'
 import blogData from '../../../data/blog.json'
 
 interface PageProps {
@@ -40,17 +41,8 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white">
-
       {/* NAV */}
-      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-8 md:px-12 bg-white/90 backdrop-blur-sm border-b border-zinc-100">
-        <Link href="/" className="text-xs uppercase tracking-widest text-black hover:opacity-50 transition-opacity">
-          Abdulrahman
-        </Link>
-        <div className="flex gap-8 text-xs uppercase tracking-widest text-black">
-          <Link href="/work" className="hover:opacity-50 transition-opacity">Work</Link>
-          <Link href="/about" className="hover:opacity-50 transition-opacity">About</Link>
-        </div>
-      </nav>
+      <NavBar forceLight />
 
       {/* ARTICLE */}
       <article className="pt-40 pb-24 px-6 md:px-12">
