@@ -90,7 +90,7 @@ export default function Home() {
             Abdulrahman
           </h1>
           <p className="font-body text-xs md:text-sm text-zinc-400 uppercase tracking-widest mt-4">
-            Architect & Interior Designer — Abuja, Nigeria & beyond
+            Architecture, Interior Design, Project Delivery — Abuja, Nigeria
           </p>
         </div>
       </section>
