@@ -122,3 +122,27 @@ content:
           - name: body
             label: Post Body (separate paragraphs with a blank line)
             type: text
+
+- name: testimonials
+    label: Testimonials
+    type: file
+    path: data/testimonials.json
+    format: json
+    fields:
+      - name: testimonials
+        label: Testimonials
+        type: object
+        list: true
+        fields:
+          - name: quote
+            label: Quote
+            type: text
+          - name: name
+            label: Client Name
+            type: string
+          - name: title
+            label: Project / Role (e.g. Villa QAG, Abuja)
+            type: string
+          - name: year
+            label: Year (e.g. 2024)
+            type: string
