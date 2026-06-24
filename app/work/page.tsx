@@ -45,7 +45,7 @@ export default function WorkPage() {
                   className="folio-img w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>
-              <div className="flex justify-between items-start border-t border-zinc-200 pt-4">
+              <div className="flex flex-col border-t border-zinc-200 pt-4 gap-3 md:flex-row md:justify-between md:items-start md:gap-0">
                 <div>
                   <h3 className="font-body text-lg font-normal tracking-tight text-black">
                     {project.title}
@@ -57,7 +57,7 @@ export default function WorkPage() {
                     </p>
                   )}
                 </div>
-                <span className="text-xs font-light text-zinc-400 uppercase tracking-wider bg-zinc-100 px-3 py-1 rounded-full shrink-0 ml-4">
+                <span className="self-start text-xs font-light text-zinc-400 uppercase tracking-wider bg-zinc-100 px-3 py-1 rounded-full md:ml-4 md:shrink-0">
                   {project.category}
                 </span>
               </div>
