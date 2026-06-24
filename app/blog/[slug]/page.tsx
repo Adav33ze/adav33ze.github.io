@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import NavBar from '../../components/NavBar'
 import blogData from '../../../data/blog.json'
+import ReactMarkdown from 'react-markdown'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -37,7 +38,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     )
   }
 
-  const paragraphs = post.body.split('\n\n').filter(Boolean)
+
 
   return (
     <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white">
@@ -58,12 +59,8 @@ export default async function BlogPostPage({ params }: PageProps) {
         </header>
 
         {/* excerpt removed — body paragraphs only */}
-        <div className="max-w-3xl mx-auto space-y-6">
-          {paragraphs.map((paragraph, i) => (
-            <p key={i} className="font-body text-sm md:text-base font-light leading-relaxed text-zinc-600">
-              {paragraph}
-            </p>
-          ))}
+        <div className="max-w-3xl mx-auto prose prose-zinc prose-sm md:prose-base prose-headings:font-display prose-headings:font-light prose-p:font-light prose-p:leading-relaxed prose-p:text-zinc-600 prose-strong:text-black prose-a:text-black">
+          <ReactMarkdown>{post.body}</ReactMarkdown>
         </div>
       </article>
 

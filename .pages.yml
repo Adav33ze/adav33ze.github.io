@@ -120,8 +120,8 @@ content:
             label: Short Excerpt (shown in journal list)
             type: text
           - name: body
-            label: Post Body (separate paragraphs with a blank line)
-            type: text
+            label: Post Body
+            type: rich-text
 
   - name: testimonials
     label: Testimonials
