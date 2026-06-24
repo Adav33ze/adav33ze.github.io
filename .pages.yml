@@ -123,11 +123,7 @@ content:
             label: Post Body (separate paragraphs with a blank line)
             type: text
 
-<<<<<<< Updated upstream
-- name: testimonials
-=======
   - name: testimonials
->>>>>>> Stashed changes
     label: Testimonials
     type: file
     path: data/testimonials.json

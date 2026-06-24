@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import NavBar from './components/NavBar'
+import ContactButton from './components/ContactButton'
 import portfolioData from '../data/portfolio.json'
 import blogData from '../data/blog.json'
 import heroData from '../data/hero.json'
@@ -101,12 +102,7 @@ export default function Home() {
             >
               View Projects →
             </Link>
-            <a
-              href="mailto:hello@adav33ze.com"
-              className="text-xs uppercase tracking-widest border border-white/40 text-white px-6 py-3 hover:border-white transition-colors"
-            >
-              Get in Touch
-            </a>
+            <ContactButton variant="hero" />
           </div>
         </div>
       </section>
@@ -199,12 +195,7 @@ export default function Home() {
               >
                 Full Profile →
               </Link>
-              <a
-                href="mailto:hello@adav33ze.com.ng"
-                className="text-xs uppercase tracking-widest border-b border-zinc-300 pb-1 text-zinc-500 hover:text-black hover:border-black transition-colors"
-              >
-                Get in Touch →
-              </a>
+              <ContactButton variant="about" />
             </div>
           </div>
           <div className="lg:col-span-5 w-full flex justify-end">
