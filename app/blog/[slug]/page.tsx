@@ -47,22 +47,18 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* ARTICLE */}
       <article className="pt-40 pb-24 px-6 md:px-12">
         <header className="max-w-3xl mx-auto mb-16 pb-12 border-b border-zinc-200">
-          {/* FIX: stack breadcrumb vertically on mobile, hide divider on mobile */}
           <div className="flex flex-col gap-2 mb-8 text-xs uppercase tracking-widest text-zinc-400 md:flex-row md:items-center md:gap-6">
             <Link href="/blog" className="hover:text-black transition-colors">← Journal</Link>
             <span className="hidden md:inline-block w-8 h-px bg-zinc-300" />
             <span>{post.date}</span>
           </div>
-          {/* FIX: text-3xl base (was text-4xl) — post titles can be long */}
           <h1 className="font-display text-3xl md:text-6xl font-light tracking-tight leading-tight">
             {post.title}
           </h1>
         </header>
 
+        {/* excerpt removed — body paragraphs only */}
         <div className="max-w-3xl mx-auto space-y-6">
-          <p className="font-body text-base md:text-xl font-light leading-relaxed text-zinc-700">
-            {post.excerpt}
-          </p>
           {paragraphs.map((paragraph, i) => (
             <p key={i} className="font-body text-sm md:text-base font-light leading-relaxed text-zinc-600">
               {paragraph}
@@ -93,7 +89,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
       </nav>
 
-      {/* FOOTER — FIX: stacks vertically on mobile */}
+      {/* FOOTER */}
       <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12">
         <div className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
           <p>© 2026 Abdulrahman. All rights reserved.</p>
