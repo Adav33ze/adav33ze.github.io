@@ -89,7 +89,8 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
         <div className="relative z-10 max-w-4xl">
-          <h1 className="font-display text-5xl md:text-8xl text-white font-light tracking-tight">
+          {/* FIX: text-4xl base (was text-5xl) to prevent overflow at 360px */}
+          <h1 className="font-display text-4xl md:text-8xl text-white font-light tracking-tight">
             Abdulrahman
           </h1>
           <p className="font-body text-xs md:text-sm text-zinc-400 uppercase tracking-widest mt-4">
@@ -276,11 +277,11 @@ export default function Home() {
         </section>
       )}
 
-      {/* FOOTER */}
+      {/* FOOTER — FIX: stacks vertically on mobile */}
       <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
           <p>© 2026 Abdulrahman. All rights reserved.</p>
-          <div className="flex gap-6 items-center">
+          <div className="flex flex-col gap-3 md:flex-row md:gap-6 md:items-center">
             <span className="text-zinc-600">Available for projects across Nigeria and beyond</span>
             <a href="mailto:hello@adav33ze.com" className="hover:text-white transition-colors">
               hello@adav33ze.com
@@ -296,8 +297,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-
 
     </div>
   )

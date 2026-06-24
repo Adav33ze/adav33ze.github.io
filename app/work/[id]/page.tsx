@@ -72,7 +72,8 @@ export default async function ProjectPage({ params }: PageProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
         <div className="relative z-10 max-w-4xl text-white">
           <p className="text-xs uppercase tracking-widest text-zinc-400 mb-3">{project.location}</p>
-          <h1 className="font-display text-4xl md:text-7xl font-light tracking-tight">
+          {/* FIX: text-3xl base (was text-4xl) — project names can be long */}
+          <h1 className="font-display text-3xl md:text-7xl font-light tracking-tight">
             {project.title}
           </h1>
         </div>
@@ -177,10 +178,12 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
       </nav>
 
-      {/* FOOTER */}
-      <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12 flex justify-between items-center">
-        <Link href="/work" className="hover:text-white transition-colors">← All Work</Link>
-        <p>© 2026 Abdulrahman. All rights reserved.</p>
+      {/* FOOTER — FIX: stacks vertically on mobile */}
+      <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12">
+        <div className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+          <Link href="/work" className="hover:text-white transition-colors">← All Work</Link>
+          <p>© 2026 Abdulrahman. All rights reserved.</p>
+        </div>
       </footer>
 
     </div>

@@ -19,7 +19,8 @@ export default function BlogPage() {
       <header className="pt-40 pb-16 px-6 md:px-12 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs uppercase tracking-widest text-zinc-400 mb-4">Journal</p>
-          <h1 className="font-display text-5xl md:text-7xl font-light tracking-tight max-w-2xl">
+          {/* FIX: text-4xl base (was text-5xl) */}
+          <h1 className="font-display text-4xl md:text-7xl font-light tracking-tight max-w-2xl">
             Writing on Space & Construction
           </h1>
         </div>
@@ -56,10 +57,12 @@ export default function BlogPage() {
         ))}
       </main>
 
-      {/* FOOTER */}
-      <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12 flex justify-between items-center mt-24">
-        <p>© 2026 Abdulrahman. All rights reserved.</p>
-        <Link href="/" className="hover:text-white transition-colors">Back to Home</Link>
+      {/* FOOTER — FIX: stacks vertically on mobile */}
+      <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12 mt-24">
+        <div className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+          <p>© 2026 Abdulrahman. All rights reserved.</p>
+          <Link href="/" className="hover:text-white transition-colors">Back to Home</Link>
+        </div>
       </footer>
 
     </div>
