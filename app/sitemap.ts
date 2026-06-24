@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next'
 import portfolioData from '../data/portfolio.json'
 import blogData from '../data/blog.json'
 
+export const dynamic = 'force-static'
+
 function slugify(title: string) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 }
