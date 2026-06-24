@@ -4,6 +4,7 @@ import portfolioData from '../data/portfolio.json'
 import blogData from '../data/blog.json'
 import heroData from '../data/hero.json'
 import profileData from '../data/profile.json'
+import testimonialsData from '../data/testimonials.json'
 
 export const metadata = {
   title: 'Abdulrahman — Architect & Interior Designer',
@@ -13,6 +14,7 @@ export const metadata = {
 export default function Home() {
   const projects = portfolioData.projects
   const posts = blogData.posts
+  const testimonials = testimonialsData.testimonials
   const hero = heroData as {
     mode: 'single' | 'slideshow'
     image: string
@@ -92,6 +94,20 @@ export default function Home() {
           <p className="font-body text-xs md:text-sm text-zinc-400 uppercase tracking-widest mt-4">
             Architecture, Interior Design, Project Delivery — Abuja, Nigeria
           </p>
+          <div className="mt-8 flex gap-4 flex-wrap">
+            <Link
+              href="/work"
+              className="text-xs uppercase tracking-widest bg-white text-black px-6 py-3 hover:bg-zinc-200 transition-colors"
+            >
+              View Projects →
+            </Link>
+            <a
+              href="mailto:hello@adav33ze.com"
+              className="text-xs uppercase tracking-widest border border-white/40 text-white px-6 py-3 hover:border-white transition-colors"
+            >
+              Get in Touch
+            </a>
+          </div>
         </div>
       </section>
 
@@ -130,8 +146,13 @@ export default function Home() {
                     {project.title}
                   </h3>
                   <p className="text-xs text-zinc-500 mt-1">{project.location}</p>
+                  {project.description && (
+                    <p className="text-xs text-zinc-400 mt-2 font-light leading-relaxed max-w-xs">
+                      {project.description}
+                    </p>
+                  )}
                 </div>
-                <span className="text-xs font-light text-zinc-400 uppercase tracking-wider bg-zinc-100 px-3 py-1 rounded-full">
+                <span className="text-xs font-light text-zinc-400 uppercase tracking-wider bg-zinc-100 px-3 py-1 rounded-full shrink-0 ml-4">
                   {project.category}
                 </span>
               </div>
@@ -198,6 +219,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      {testimonials && testimonials.length > 0 && (
+        <section className="py-24 px-6 md:px-12 bg-white border-t border-zinc-200">
+          <div className="mb-16">
+            <p className="text-xs uppercase tracking-widest text-zinc-400 mb-2">Clients</p>
+            <h2 className="font-display text-4xl font-light">What they say</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+            {testimonials.map((t: any, i: number) => (
+              <div key={i} className="flex flex-col justify-between border-t border-zinc-200 pt-8">
+                <blockquote className="font-display text-xl md:text-2xl font-light leading-relaxed text-zinc-800 mb-8">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <div className="flex items-end justify-between">
+                  <div>
+                    <p className="text-sm font-normal text-black">{t.name}</p>
+                    <p className="text-xs text-zinc-400 mt-0.5">{t.title}</p>
+                  </div>
+                  <span className="text-xs uppercase tracking-widest text-zinc-300">{t.year}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* JOURNAL PREVIEW */}
       {posts && posts.length > 0 && (
         <section className="py-24 px-6 md:px-12 border-t border-zinc-200">
@@ -239,11 +286,24 @@ export default function Home() {
       )}
 
       {/* FOOTER */}
-      <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12 flex justify-between items-center">
-        <p>© 2026 Abdulrahman. All rights reserved.</p>
-        <a href="mailto:hello@adav33ze.com.ng" className="hover:text-white transition-colors">
-          hello@adav33ze.com.ng
-        </a>
+      <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <p>© 2026 Abdulrahman. All rights reserved.</p>
+          <div className="flex gap-6 items-center">
+            <span className="text-zinc-600">Available for projects across Nigeria and beyond</span>
+            <a href="mailto:hello@adav33ze.com" className="hover:text-white transition-colors">
+              hello@adav33ze.com
+            </a>
+            <a
+              href="https://wa.me/2348065506222"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              WhatsApp →
+            </a>
+          </div>
+        </div>
       </footer>
 
 

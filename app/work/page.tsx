@@ -50,8 +50,13 @@ export default function WorkPage() {
                     {project.title}
                   </h3>
                   <p className="text-xs text-zinc-500 mt-1">{project.location}</p>
+                  {project.description && (
+                    <p className="text-xs text-zinc-400 mt-2 font-light leading-relaxed max-w-xs">
+                      {project.description}
+                    </p>
+                  )}
                 </div>
-                <span className="text-xs font-light text-zinc-400 uppercase tracking-wider bg-zinc-100 px-3 py-1 rounded-full">
+                <span className="text-xs font-light text-zinc-400 uppercase tracking-wider bg-zinc-100 px-3 py-1 rounded-full shrink-0 ml-4">
                   {project.category}
                 </span>
               </div>

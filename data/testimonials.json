@@ -1,0 +1,16 @@
+{
+  "testimonials": [
+    {
+      "quote": "Abdulrahman brought clarity and precision to a project that had stalled for months. From concept through to handover, his process was structured and his eye for detail was exceptional.",
+      "name": "Client Name",
+      "title": "Project, Location",
+      "year": "2024"
+    },
+    {
+      "quote": "Working with Abdulrahman felt collaborative from day one. He understood not just what we wanted the space to look like, but how we needed it to function.",
+      "name": "Client Name",
+      "title": "Project, Location",
+      "year": "2023"
+    }
+  ]
+}
