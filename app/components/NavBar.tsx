@@ -30,7 +30,7 @@ export default function NavBar({ forceLight = false, heroGradient = false }: Nav
       <div
         className={`
           relative flex justify-between items-center
-          px-6 py-6 md:px-12
+          px-4 py-5 md:px-12 md:py-6
           transition-all duration-300 ease-in-out
           ${isLight
             ? 'bg-white/80 backdrop-blur-md border-b border-zinc-100 shadow-sm'
@@ -38,18 +38,20 @@ export default function NavBar({ forceLight = false, heroGradient = false }: Nav
           }
         `}
       >
+        {/* FIX: tracking-wider on mobile (was tracking-widest) */}
         <Link
           href="/"
           className={`
-            text-xs uppercase tracking-widest font-light transition-colors duration-300
+            text-xs uppercase tracking-wider md:tracking-widest font-light transition-colors duration-300
             ${isLight ? 'text-black hover:opacity-50' : 'text-white hover:opacity-50'}
           `}
         >
           ADAV33ZE
         </Link>
 
+        {/* FIX: gap-4 on mobile (was gap-8), tracking-wider on mobile */}
         <div className={`
-          flex gap-8 text-xs uppercase tracking-widest transition-colors duration-300
+          flex gap-4 md:gap-8 text-xs uppercase tracking-wider md:tracking-widest transition-colors duration-300
           ${isLight ? 'text-black' : 'text-white'}
         `}>
           <Link href="/work" className="hover:opacity-50 transition-opacity">Work</Link>
