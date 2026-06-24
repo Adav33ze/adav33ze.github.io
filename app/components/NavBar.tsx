@@ -22,7 +22,6 @@ export default function NavBar({ forceLight = false, heroGradient = false }: Nav
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
-      {/* Gradient scrim — only on hero pages, only when not scrolled */}
       {heroGradient && !scrolled && (
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none" />
       )}
@@ -38,7 +37,6 @@ export default function NavBar({ forceLight = false, heroGradient = false }: Nav
           }
         `}
       >
-        {/* FIX: tracking-wider on mobile (was tracking-widest) */}
         <Link
           href="/"
           className={`
@@ -49,12 +47,12 @@ export default function NavBar({ forceLight = false, heroGradient = false }: Nav
           ADAV33ZE
         </Link>
 
-        {/* FIX: gap-4 on mobile (was gap-8), tracking-wider on mobile */}
         <div className={`
           flex gap-4 md:gap-8 text-xs uppercase tracking-wider md:tracking-widest transition-colors duration-300
           ${isLight ? 'text-black' : 'text-white'}
         `}>
           <Link href="/work" className="hover:opacity-50 transition-opacity">Work</Link>
+          <Link href="/blog" className="hover:opacity-50 transition-opacity">Journal</Link>
           <Link href="/about" className="hover:opacity-50 transition-opacity">About</Link>
         </div>
       </div>
