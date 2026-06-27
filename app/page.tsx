@@ -92,13 +92,16 @@ export default function Home() {
         )}
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-        <div className="relative z-10 max-w-4xl">
-          {/* FIX: text-4xl base (was text-5xl) to prevent overflow at 360px */}
-          <h1 className="font-display text-4xl md:text-8xl text-white font-light tracking-tight">
-            {hero.headline ?? 'Abdulrahman'}
+        <div className="relative z-10 max-w-3xl">
+          {/* Dictionary definition hero */}
+          <h1 className="font-display text-5xl md:text-8xl text-white font-light tracking-tight leading-none">
+            adavize
           </h1>
-          <p className="font-body text-base md:text-xl text-zinc-300 font-light mt-4 max-w-xl leading-relaxed">
-            {hero.subheadline ?? 'Architecture and interiors, resolved from concept to handover.'}
+          <p className="font-body text-base md:text-2xl text-zinc-300 tracking-wide font-light mt-3 mb-6">
+            /ˌɑːdɑːˈviːzeɪ/ &nbsp; n.
+          </p>
+          <p className="font-display text-2xl md:text-4xl text-zinc-200 font-light italic leading-snug">
+            {hero.subheadline ?? 'bringer of fortune.'}
           </p>
           {hero.body && (
             <p className="font-body text-sm md:text-base text-zinc-200 font-light mt-3 max-w-lg leading-relaxed hidden md:block">

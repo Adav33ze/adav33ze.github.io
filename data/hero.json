@@ -1,4 +1,5 @@
 {
+  "mode": "single",
   "image": "images/portfolio/Chalet 12.png",
   "alt": "Architectural project by Abdulrahman",
   "slides": [
@@ -7,8 +8,8 @@
       "alt": "Architectural project by Abdulrahman"
     }
   ],
-  "headline": "ADAV33ZE",
-  "subheadline": "Architecture and interiors, resolved from concept to handover.",
-  "body": "I work across residential, hospitality, and institutional projects in Nigeria and internationally, bringing structural rigor and spatial precision to every brief, from first sketch to final finish.",
-  "location": "Abuja, Nigeria"
+  "headline": "adavize  /ˌɑːdɑːˈviːzeɪ/  n.",
+  "subheadline": "bringer of fortune.",
+  "body": "Architecture and interiors that add lasting value — from first sketch to final handover.",
+  "location": "Based in Abuja. Available worldwide."
 }
