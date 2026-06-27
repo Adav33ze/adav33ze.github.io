@@ -51,7 +51,7 @@ export default function ContactButton({ variant = 'hero' }: { variant?: Variant 
     },
     {
       label: 'Email',
-      href: 'mailto:hello@adav33ze.com',
+      href: 'mailto:studio@adav33ze.com',
       icon: (
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect width="20" height="16" x="2" y="4" rx="2"/>
