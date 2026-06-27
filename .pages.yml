@@ -14,10 +14,11 @@ content:
         label: Hero Mode
         type: select
         options:
-          - label: Single Image
-            value: single
-          - label: Slideshow
-            value: slideshow
+          values:
+            - value: single
+              label: Single Image
+            - value: slideshow
+              label: Slideshow
       - name: image
         label: Single Image (used when mode is Single Image)
         type: image
