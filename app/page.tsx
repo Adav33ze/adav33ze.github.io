@@ -104,7 +104,7 @@ export default function Home() {
             {hero.subheadline ?? 'bringer of fortune.'}
           </p>
           {hero.body && (
-            <p className="font-body text-sm md:text-base text-zinc-200 font-light mt-3 max-w-lg leading-relaxed hidden md:block">
+            <p className="font-body text-sm md:text-base text-zinc-200 font-light mt-3 max-w-lg leading-relaxed">
               {hero.body}
             </p>
           )}
