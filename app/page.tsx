@@ -91,22 +91,22 @@ export default function Home() {
           />
         )}
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
         <div className="relative z-10 max-w-4xl">
           {/* FIX: text-4xl base (was text-5xl) to prevent overflow at 360px */}
           <h1 className="font-display text-4xl md:text-8xl text-white font-light tracking-tight">
             {hero.headline ?? 'Abdulrahman'}
           </h1>
-          <p className="font-body text-sm md:text-base text-zinc-300 font-light mt-4 max-w-xl leading-relaxed">
+          <p className="font-body text-base md:text-xl text-zinc-300 font-light mt-4 max-w-xl leading-relaxed">
             {hero.subheadline ?? 'Architecture and interiors, resolved from concept to handover.'}
           </p>
           {hero.body && (
-            <p className="font-body text-xs md:text-sm text-zinc-400 font-light mt-3 max-w-lg leading-relaxed hidden md:block">
+            <p className="font-body text-sm md:text-base text-zinc-200 font-light mt-3 max-w-lg leading-relaxed hidden md:block">
               {hero.body}
             </p>
           )}
           {hero.location && (
-            <p className="font-body text-xs text-zinc-500 uppercase tracking-widest mt-4">
+            <p className="font-body text-sm text-zinc-400 uppercase tracking-widest mt-4">
               {hero.location}
             </p>
           )}
@@ -214,7 +214,7 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-5 w-full flex justify-end">
-            <div className="relative aspect-square w-full max-w-md bg-zinc-200 overflow-hidden grayscale contrast-115 shadow-2xl">
+            <div className="relative aspect-square w-full max-w-md bg-zinc-200 overflow-hidden grayscale contrast-115 shadow-2xl border border-zinc-300">
               <img
                 src={profileData.image.startsWith('/') ? profileData.image : `/${profileData.image}`}
                 alt={profileData.alt}
