@@ -21,6 +21,10 @@ export default function Home() {
     image: string
     alt: string
     slides: { image: string; alt: string }[]
+    headline?: string
+    subheadline?: string
+    body?: string
+    location?: string
   }
 
   const isSlideshow = hero.mode === 'slideshow' && hero.slides && hero.slides.length > 1
@@ -91,11 +95,21 @@ export default function Home() {
         <div className="relative z-10 max-w-4xl">
           {/* FIX: text-4xl base (was text-5xl) to prevent overflow at 360px */}
           <h1 className="font-display text-4xl md:text-8xl text-white font-light tracking-tight">
-            Abdulrahman
+            {hero.headline ?? 'Abdulrahman'}
           </h1>
-          <p className="font-body text-xs md:text-sm text-zinc-400 uppercase tracking-widest mt-4">
-            Architecture, Interior Design, Project Delivery — Abuja, Nigeria
+          <p className="font-body text-sm md:text-base text-zinc-300 font-light mt-4 max-w-xl leading-relaxed">
+            {hero.subheadline ?? 'Architecture and interiors, resolved from concept to handover.'}
           </p>
+          {hero.body && (
+            <p className="font-body text-xs md:text-sm text-zinc-400 font-light mt-3 max-w-lg leading-relaxed hidden md:block">
+              {hero.body}
+            </p>
+          )}
+          {hero.location && (
+            <p className="font-body text-xs text-zinc-500 uppercase tracking-widest mt-4">
+              {hero.location}
+            </p>
+          )}
           <div className="mt-8 flex gap-4 flex-wrap">
             <Link
               href="/work"

@@ -35,6 +35,18 @@ content:
           - name: alt
             label: Alt Text
             type: string
+      - name: headline
+        label: Headline
+        type: string
+      - name: subheadline
+        label: Subheadline
+        type: string
+      - name: body
+        label: Body Text
+        type: text
+      - name: location
+        label: Location Line
+        type: string
 
   - name: profile
     label: Profile Image
