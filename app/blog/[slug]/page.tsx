@@ -7,13 +7,24 @@ interface PageProps {
   params: Promise<{ slug: string }>
 }
 
+const sortedPosts = [...blogData.posts].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+)
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('en-GB', {
+    month: 'short',
+    year: 'numeric',
+  })
+}
+
 export async function generateStaticParams() {
-  return blogData.posts.map((post) => ({ slug: post.slug }))
+  return sortedPosts.map((post) => ({ slug: post.slug }))
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params
-  const post = blogData.posts.find((p) => p.slug === slug)
+  const post = sortedPosts.find((p) => p.slug === slug)
   return {
     title: post ? `${post.title} — Abdulrahman` : 'Post Not Found — Abdulrahman',
     description: post?.excerpt,
@@ -22,10 +33,10 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params
-  const post = blogData.posts.find((p) => p.slug === slug)
-  const postIndex = blogData.posts.findIndex((p) => p.slug === slug)
-  const prevPost = postIndex > 0 ? blogData.posts[postIndex - 1] : null
-  const nextPost = postIndex < blogData.posts.length - 1 ? blogData.posts[postIndex + 1] : null
+  const post = sortedPosts.find((p) => p.slug === slug)
+  const postIndex = sortedPosts.findIndex((p) => p.slug === slug)
+  const prevPost = postIndex > 0 ? sortedPosts[postIndex - 1] : null
+  const nextPost = postIndex < sortedPosts.length - 1 ? sortedPosts[postIndex + 1] : null
 
   if (!post) {
     return (
@@ -38,8 +49,6 @@ export default async function BlogPostPage({ params }: PageProps) {
     )
   }
 
-
-
   return (
     <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white">
       {/* NAV */}
@@ -51,14 +60,13 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="flex flex-col gap-2 mb-8 text-xs uppercase tracking-widest text-zinc-400 md:flex-row md:items-center md:gap-6">
             <Link href="/blog" className="hover:text-black transition-colors">← Journal</Link>
             <span className="hidden md:inline-block w-8 h-px bg-zinc-300" />
-            <span>{post.date}</span>
+            <span>{formatDate(post.date)}</span>
           </div>
           <h1 className="font-display text-3xl md:text-6xl font-light tracking-tight leading-tight">
             {post.title}
           </h1>
         </header>
 
-        {/* excerpt removed — body paragraphs only */}
         <div className="max-w-3xl mx-auto prose prose-zinc prose-sm md:prose-base prose-headings:font-display prose-headings:font-light prose-p:font-light prose-p:leading-relaxed prose-p:text-zinc-600 prose-strong:text-black prose-a:text-black">
           <ReactMarkdown>{post.body}</ReactMarkdown>
         </div>
@@ -93,7 +101,6 @@ export default async function BlogPostPage({ params }: PageProps) {
           <Link href="/blog" className="hover:text-white transition-colors">Back to Journal</Link>
         </div>
       </footer>
-
     </div>
   )
 }
