@@ -12,9 +12,18 @@ export const metadata = {
   description: 'Abdulrahman is an Architect and Interior Designer based in Abuja, Nigeria, working across residential, hospitality, and institutional projects locally and internationally.',
 }
 
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('en-GB', {
+    month: 'short',
+    year: 'numeric',
+  })
+}
+
 export default function Home() {
   const projects = portfolioData.projects
-  const posts = blogData.posts
+  const posts = [...blogData.posts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
   const testimonials = testimonialsData.testimonials
   const hero = heroData as {
     mode: 'single' | 'slideshow'
@@ -277,7 +286,7 @@ export default function Home() {
                 className="group flex flex-col md:flex-row md:items-start md:gap-16 py-8 transition-colors"
               >
                 <span className="text-xs uppercase tracking-widest text-zinc-400 md:w-32 shrink-0 mb-2 md:mb-0">
-                  {post.date}
+                  {formatDate(post.date)}
                 </span>
                 <div className="flex-1">
                   <h3 className="font-display text-xl font-light mb-2 group-hover:opacity-60 transition-opacity">
