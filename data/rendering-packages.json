@@ -1,28 +1,64 @@
 {
-  "tiers": [
+  "categories": [
     {
-      "name": "Essential",
-      "renderCount": 2,
-      "bestFor": "Single room, bathroom, small space",
-      "turnaround": "2–3 days",
-      "price": 180,
-      "revisionsIncluded": 3
+      "id": "interior",
+      "label": "Interior Renders",
+      "tiers": [
+        {
+          "name": "Essential",
+          "renderCount": 2,
+          "bestFor": "Single room, bathroom, small space",
+          "turnaround": "2–3 days",
+          "price": 180,
+          "revisionsIncluded": 3
+        },
+        {
+          "name": "Standard",
+          "renderCount": 4,
+          "bestFor": "Bedroom, kitchen, living room",
+          "turnaround": "3–5 days",
+          "price": 320,
+          "revisionsIncluded": 3
+        },
+        {
+          "name": "Premium",
+          "renderCount": 6,
+          "bestFor": "Full apartment, commercial space",
+          "turnaround": "5–7 days",
+          "price": 480,
+          "revisionsIncluded": 3
+        }
+      ]
     },
     {
-      "name": "Standard",
-      "renderCount": 4,
-      "bestFor": "Bedroom, kitchen, living room",
-      "turnaround": "3–5 days",
-      "price": 320,
-      "revisionsIncluded": 3
-    },
-    {
-      "name": "Premium",
-      "renderCount": 6,
-      "bestFor": "Full apartment, commercial space",
-      "turnaround": "5–7 days",
-      "price": 480,
-      "revisionsIncluded": 3
+      "id": "exterior",
+      "label": "Exterior Renders",
+      "tiers": [
+        {
+          "name": "Essential",
+          "renderCount": 2,
+          "bestFor": "Single elevation, small residential exterior",
+          "turnaround": "2–3 days",
+          "price": 200,
+          "revisionsIncluded": 3
+        },
+        {
+          "name": "Standard",
+          "renderCount": 4,
+          "bestFor": "Full residential exterior, multiple elevations & landscaping",
+          "turnaround": "4–6 days",
+          "price": 380,
+          "revisionsIncluded": 3
+        },
+        {
+          "name": "Premium",
+          "renderCount": 6,
+          "bestFor": "Large residential, commercial exterior, or estate development",
+          "turnaround": "6–9 days",
+          "price": 580,
+          "revisionsIncluded": 3
+        }
+      ]
     }
   ],
   "addOns": [

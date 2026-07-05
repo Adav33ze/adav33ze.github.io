@@ -26,6 +26,12 @@ type Tier = {
   revisionsIncluded: number
 }
 
+type Category = {
+  id: string
+  label: string
+  tiers: Tier[]
+}
+
 type AddOn = {
   label: string
   amountUsd: number
@@ -34,7 +40,7 @@ type AddOn = {
 
 export default async function ServicesPricingPage() {
   const { services } = servicesData as { services: Service[] }
-  const { tiers, addOns } = renderingPackages as { tiers: Tier[]; addOns: AddOn[] }
+  const { categories, addOns } = renderingPackages as { categories: Category[]; addOns: AddOn[] }
 
   const rate = await getUsdToNgnRate()
   const toNgn = (usd: number) => usd * rate
@@ -72,7 +78,7 @@ export default async function ServicesPricingPage() {
             </div>
             <div>
               <span className="text-zinc-300">Visualisation</span>
-              <span className="ml-3 text-black">Priced in Naira</span>
+              <span className="ml-3 text-black">Fixed Pricing</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-zinc-300">Contact</span>
@@ -126,51 +132,57 @@ export default async function ServicesPricingPage() {
           <div className="lg:col-span-4">
             <p className="text-xs uppercase tracking-widest text-zinc-400">Visualisation Packages</p>
             <p className="text-sm font-light text-zinc-500 mt-4 max-w-xs">
-              Fixed pricing, {tiers[0]?.revisionsIncluded} rounds of revision included on every tier.
-              Quoted in Naira; the USD figure is a reference conversion, updated daily.
+              Fixed pricing, 3 rounds of revision included on every package.
             </p>
           </div>
           <div className="lg:col-span-8" />
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-px bg-zinc-200">
-          {tiers.map((tier) => {
-            const ngnPrice = toNgn(tier.price)
-            return (
-              <div key={tier.name} className="bg-white p-8 flex flex-col">
-                <p className="text-xs uppercase tracking-widest text-zinc-400 mb-6">
-                  {tier.renderCount} Renders
-                </p>
-                <h3 className="font-display text-3xl font-light tracking-tight mb-2">{tier.name}</h3>
-                <p className="text-sm font-light text-zinc-500 mb-8">{tier.bestFor}</p>
+        <div className="max-w-7xl mx-auto space-y-16">
+          {categories.map((category) => (
+            <div key={category.id}>
+              <p className="text-xs uppercase tracking-widest text-zinc-400 mb-6">{category.label}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-zinc-200">
+                {category.tiers.map((tier) => {
+                  const ngnPrice = toNgn(tier.price)
+                  return (
+                    <div key={tier.name} className="bg-white p-8 flex flex-col">
+                      <p className="text-xs uppercase tracking-widest text-zinc-400 mb-6">
+                        {tier.renderCount} Renders
+                      </p>
+                      <h3 className="font-display text-3xl font-light tracking-tight mb-2">{tier.name}</h3>
+                      <p className="text-sm font-light text-zinc-500 mb-8">{tier.bestFor}</p>
 
-                <p className="font-display text-4xl md:text-5xl font-light tracking-tight mb-1">
-                  {formatNgn(ngnPrice)}
-                </p>
-                <p className="text-xs uppercase tracking-widest text-zinc-400 mb-8">
-                  ≈ ${tier.price} USD
-                </p>
+                      <p className="font-display text-4xl md:text-5xl font-light tracking-tight mb-1">
+                        {formatNgn(ngnPrice)}
+                      </p>
+                      <p className="text-xs uppercase tracking-widest text-zinc-400 mb-8">
+                        ≈ ${tier.price} USD
+                      </p>
 
-                <div className="text-xs uppercase tracking-widest text-zinc-400 space-y-3 mb-10">
-                  <div className="flex justify-between border-t border-zinc-100 pt-3">
-                    <span>Turnaround</span>
-                    <span className="text-black">{tier.turnaround}</span>
-                  </div>
-                  <div className="flex justify-between border-t border-zinc-100 pt-3">
-                    <span>Revisions</span>
-                    <span className="text-black">{tier.revisionsIncluded} included</span>
-                  </div>
-                </div>
+                      <div className="text-xs uppercase tracking-widest text-zinc-400 space-y-3 mb-10">
+                        <div className="flex justify-between border-t border-zinc-100 pt-3">
+                          <span>Turnaround</span>
+                          <span className="text-black">{tier.turnaround}</span>
+                        </div>
+                        <div className="flex justify-between border-t border-zinc-100 pt-3">
+                          <span>Revisions</span>
+                          <span className="text-black">{tier.revisionsIncluded} included</span>
+                        </div>
+                      </div>
 
-                <ContactMenu
-                  label={`Select ${tier.name}`}
-                  methods={contactMethods}
-                  variant="button"
-                  className="mt-auto"
-                />
+                      <ContactMenu
+                        label={`Select ${tier.name}`}
+                        methods={contactMethods}
+                        variant="button"
+                        className="mt-auto"
+                      />
+                    </div>
+                  )
+                })}
               </div>
-            )
-          })}
+            </div>
+          ))}
         </div>
       </section>
 

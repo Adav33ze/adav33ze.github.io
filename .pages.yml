@@ -190,29 +190,40 @@ content:
     path: data/rendering-packages.json
     format: json
     fields:
-      - name: tiers
-        label: Tiers (prices in USD — NGN is calculated automatically)
+      - name: categories
+        label: Categories (e.g. Interior, Exterior)
         type: object
         list: true
         fields:
-          - name: name
-            label: Tier Name
+          - name: id
+            label: "ID (short, no spaces, e.g. interior)"
             type: string
-          - name: renderCount
-            label: Number of Renders
-            type: number
-          - name: bestFor
-            label: Best For
+          - name: label
+            label: "Display Label (e.g. Interior Renders)"
             type: string
-          - name: turnaround
-            label: Turnaround (e.g. 2–3 days)
-            type: string
-          - name: price
-            label: Price in USD
-            type: number
-          - name: revisionsIncluded
-            label: Revisions Included
-            type: number
+          - name: tiers
+            label: Tiers (prices in USD — NGN is calculated automatically)
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Tier Name
+                type: string
+              - name: renderCount
+                label: Number of Renders
+                type: number
+              - name: bestFor
+                label: Best For
+                type: string
+              - name: turnaround
+                label: Turnaround (e.g. 2–3 days)
+                type: string
+              - name: price
+                label: Price in USD
+                type: number
+              - name: revisionsIncluded
+                label: Revisions Included
+                type: number
       - name: addOns
         label: Add-ons (prices in USD)
         type: object
