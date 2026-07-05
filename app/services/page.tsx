@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import NavBar from '../components/NavBar'
 import ContactMenu from '../components/ContactMenu'
 import servicesData from '../../data/services.json'
@@ -71,7 +72,7 @@ export default async function ServicesPricingPage() {
             </div>
             <div>
               <span className="text-zinc-300">Visualisation</span>
-              <span className="ml-3 text-black">Fixed pricing</span>
+              <span className="ml-3 text-black">Priced in Naira</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-zinc-300">Contact</span>
@@ -216,7 +217,7 @@ export default async function ServicesPricingPage() {
       {/* FOOTER */}
       <footer className="bg-black text-zinc-500 text-[10px] uppercase tracking-widest py-8 px-6 md:px-12 flex justify-between items-center border-t border-zinc-900">
         <p>© 2026 Abdulrahman. All rights reserved.</p>
-        <a href="/" className="hover:text-white transition-colors">Back to Home</a>
+        <Link href="/" className="hover:text-white transition-colors">Back to Home</Link>
       </footer>
     </div>
   )
