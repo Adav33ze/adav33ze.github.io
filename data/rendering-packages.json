@@ -9,7 +9,7 @@
           "renderCount": 2,
           "bestFor": "Single room, bathroom, small space",
           "turnaround": "2–3 days",
-          "price": 180,
+          "price": 250,
           "revisionsIncluded": 3
         },
         {
@@ -17,7 +17,7 @@
           "renderCount": 4,
           "bestFor": "Bedroom, kitchen, living room",
           "turnaround": "3–5 days",
-          "price": 320,
+          "price": 390,
           "revisionsIncluded": 3
         },
         {
@@ -25,7 +25,7 @@
           "renderCount": 6,
           "bestFor": "Full apartment, commercial space",
           "turnaround": "5–7 days",
-          "price": 480,
+          "price": 600,
           "revisionsIncluded": 3
         }
       ]
@@ -62,9 +62,25 @@
     }
   ],
   "addOns": [
-    { "label": "Extra camera view", "amountUsd": 40, "isDelta": true },
-    { "label": "Independent single render", "amountUsd": 150, "isDelta": false },
-    { "label": "Extra revision (beyond 3 included)", "amountUsd": 10, "isDelta": true },
-    { "label": "Rush delivery", "amountUsd": 80, "isDelta": true }
+    {
+      "label": "Extra camera view",
+      "amountUsd": 40,
+      "isDelta": true
+    },
+    {
+      "label": "Independent single render",
+      "amountUsd": 150,
+      "isDelta": false
+    },
+    {
+      "label": "Extra revision (beyond 3 included)",
+      "amountUsd": 10,
+      "isDelta": true
+    },
+    {
+      "label": "Rush delivery",
+      "amountUsd": 80,
+      "isDelta": true
+    }
   ]
 }
