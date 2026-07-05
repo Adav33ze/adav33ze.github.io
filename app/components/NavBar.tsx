@@ -54,6 +54,7 @@ export default function NavBar({ forceLight = false, heroGradient = false }: Nav
           <Link href="/work" className="hover:opacity-50 transition-opacity">Work</Link>
           <Link href="/blog" className="hover:opacity-50 transition-opacity">Journal</Link>
           <Link href="/about" className="hover:opacity-50 transition-opacity">About</Link>
+          <Link href="/services" className="hover:opacity-50 transition-opacity">Pricing</Link>
         </div>
       </div>
     </nav>

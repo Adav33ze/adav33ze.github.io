@@ -14,11 +14,10 @@ content:
         label: Hero Mode
         type: select
         options:
-          values:
-            - value: single
-              label: Single Image
-            - value: slideshow
-              label: Slideshow
+          - label: Single Image
+            value: single
+          - label: Slideshow
+            value: slideshow
       - name: image
         label: Single Image (used when mode is Single Image)
         type: image
@@ -36,18 +35,6 @@ content:
           - name: alt
             label: Alt Text
             type: string
-      - name: headline
-        label: Headline
-        type: string
-      - name: subheadline
-        label: Subheadline
-        type: string
-      - name: body
-        label: Body Text
-        type: text
-      - name: location
-        label: Location Line
-        type: string
 
   - name: profile
     label: Profile Image
@@ -133,8 +120,8 @@ content:
             label: Short Excerpt (shown in journal list)
             type: text
           - name: body
-            label: Post Body
-            type: rich-text
+            label: Post Body (separate paragraphs with a blank line)
+            type: text
 
   - name: testimonials
     label: Testimonials
@@ -159,3 +146,84 @@ content:
           - name: year
             label: Year (e.g. 2024)
             type: string
+
+# Add these three entries to the `content:` list in your .pages.yml,
+# alongside hero/profile/portfolio/blog/testimonials.
+
+  - name: contact
+    label: Contact Details
+    type: file
+    path: data/contact.json
+    format: json
+    fields:
+      - name: email
+        label: Email
+        type: string
+      - name: whatsappNumber
+        label: "WhatsApp Number (digits only, with country code, e.g. 2348065506222)"
+        type: string
+      - name: telegramUsername
+        label: "Telegram Username (no @)"
+        type: string
+
+  - name: services
+    label: Services (Pricing Page)
+    type: file
+    path: data/services.json
+    format: json
+    fields:
+      - name: services
+        label: Services
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Description
+            type: text
+
+  - name: rendering-packages
+    label: Rendering Packages
+    type: file
+    path: data/rendering-packages.json
+    format: json
+    fields:
+      - name: tiers
+        label: Tiers (prices in USD — NGN is calculated automatically)
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Tier Name
+            type: string
+          - name: renderCount
+            label: Number of Renders
+            type: number
+          - name: bestFor
+            label: Best For
+            type: string
+          - name: turnaround
+            label: Turnaround (e.g. 2–3 days)
+            type: string
+          - name: price
+            label: Price in USD
+            type: number
+          - name: revisionsIncluded
+            label: Revisions Included
+            type: number
+      - name: addOns
+        label: Add-ons (prices in USD)
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: amountUsd
+            label: Amount in USD
+            type: number
+          - name: isDelta
+            label: "Show a + prefix? (e.g. +$40 vs a flat $150)"
+            type: boolean

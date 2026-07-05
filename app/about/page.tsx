@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import NavBar from '../components/NavBar'
+import servicesData from '../../data/services.json'
 
 export const metadata = {
   title: 'About — Abdulrahman | Architect & Interior Designer',
@@ -58,14 +59,7 @@ const education = [
   },
 ]
 
-const services = [
-  'Architectural Design',
-  'Interior Design',
-  '3D Architectural Visualisation',
-  'Construction Supervision',
-  'Project Management',
-  'Curb Appeal & Facade Design',
-]
+const { services } = servicesData as { services: { title: string; description: string }[] }
 
 export default function AboutPage() {
   return (
@@ -142,9 +136,9 @@ export default function AboutPage() {
           <div className="lg:col-span-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {services.map((service, i) => (
-                <div key={i} className="flex items-center gap-4 py-4 border-b border-zinc-100">
+                <div key={service.title} className="flex items-center gap-4 py-4 border-b border-zinc-100">
                   <span className="text-xs text-zinc-300 tabular-nums">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="text-sm font-light text-zinc-800">{service}</span>
+                  <span className="text-sm font-light text-zinc-800">{service.title}</span>
                 </div>
               ))}
             </div>

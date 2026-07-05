@@ -1,0 +1,16 @@
+{
+  "services": [
+    {
+      "title": "Architectural Design",
+      "description": "Concept design, schematic design, design development, and planning drawings from first sketch to buildable set."
+    },
+    {
+      "title": "Interior Design",
+      "description": "Space planning, material and finish selection, custom furniture specification, and full styling."
+    },
+    {
+      "title": "Project Delivery",
+      "description": "Contractor coordination, site supervision, procurement, timeline and budget management through completion."
+    }
+  ]
+}
