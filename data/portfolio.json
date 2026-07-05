@@ -1,13 +1,13 @@
 {
   "projects": [
     {
-      "slug": "property-development-abuja",
       "title": "Property Development",
+      "slug": "property-development-abuja",
       "category": "Architectural Visualization",
       "location": "Abuja, Nigeria",
       "image": "images/portfolio/Reliabuild 1x.jpg",
-      "description": "Architectural Visualization for one of Abuja's Foremost Real Estate developers",
       "alt_text": "Architectural visualization of a real estate development project in Abuja, Nigeria",
+      "description": "Architectural Visualization for one of Abuja's Foremost Real Estate developers",
       "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
       "gallery": [
         {
@@ -17,93 +17,13 @@
       ]
     },
     {
-      "slug": "5-bedroom-private-home-kaduna",
-      "title": "5 Bedroom Private Home",
-      "category": "Architectural Design",
-      "location": "Kaduna State, Nigeria",
-      "image": "images/portfolio/5 Bed 1x.png",
-      "description": "A 5 Bedroom Family home, currently under construction in Kaduna state.",
-      "alt_text": "5 bedroom private family home architectural design, Kaduna State, Nigeria",
-      "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
-      "gallery": [
-        {
-          "image": "images/portfolio/gallery/5 Bed.png",
-          "alt_text": "5 bedroom private family home architectural design, Kaduna State, Nigeria"
-        }
-      ]
-    },
-    {
-      "slug": "4-bedroom-luxury-chalet-abuja",
-      "title": "4 Bedroom Luxury Chalet, Abuja",
-      "category": "Architectural Design and Visualization",
-      "location": "Abuja, Nigeria",
-      "image": "images/portfolio/gallery/CHalet type two Night.jpg",
-      "description": "A 4 Bedroom Chalet, Facade Design, and 3D render.",
-      "alt_text": "4 bedroom luxury chalet facade design and 3D architectural render, Abuja, night view",
-      "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
-      "gallery": [
-        {
-          "image": "images/portfolio/gallery/Chalet Type 2 I.png",
-          "alt_text": "4 bedroom luxury chalet facade design and 3D architectural render, Abuja, night view"
-        }
-      ]
-    },
-    {
-      "slug": "villa-qag-jabi-lake",
-      "title": "Villa QAG",
-      "category": "Architectural Design and Visualization",
-      "location": "Jabi Lake, Abuja",
-      "image": "images/portfolio/Pram Pram.jpg",
-      "description": "A residential complex development by the Jabi Lake.",
-      "alt_text": "Villa QAG residential complex architectural design, Jabi Lake, Abuja",
-      "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
-      "gallery": [
-        {
-          "image": "images/portfolio/gallery/QAG Villa 2x.jpg",
-          "alt_text": "Villa QAG residential complex architectural design, Jabi Lake, Abuja"
-        }
-      ]
-    },
-    {
-      "slug": "apartment-qag-jabi-lake",
-      "title": "Apartment QAG",
-      "category": "Architectural Visualization",
-      "location": "Jabi Lake, Abuja",
-      "image": "images/portfolio/Apartment JAbi Lake.png",
-      "description": "Apartment Building Visualisation along Jabi Lake",
-      "alt_text": "Apartment building 3D visualization along Jabi Lake, Abuja, Nigeria",
-      "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
-      "gallery": [
-        {
-          "image": "images/portfolio/gallery/Apartment 4 .jpg",
-          "alt_text": "Apartment building 3D visualization along Jabi Lake, Abuja, Nigeria"
-        }
-      ]
-    },
-    {
-      "slug": "nagwamatse-villa",
-      "title": "Nagwamatse Villa",
-      "category": "Architectural Consultancy",
-      "location": "Nigeria",
-      "image": "images/portfolio/Mayn Mockup 1x.jpg",
-      "description": "Residential Design, Visualization and Construction Supervision.",
-      "alt_text": "Nagwamatse Villa residential design and construction supervision, Nigeria",
-      "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
-      "gallery": [
-        {
-          "image": "images/portfolio/gallery/Nagwamatse Villa 2x.jpg",
-          "alt_text": "Nagwamatse Villa residential design and construction supervision, Nigeria"
-        }
-      ]
-    },
-    {
-      "slug": "interior-design-abuja",
       "title": "Interior Design and Render",
+      "slug": "interior-design-abuja",
       "category": "Interior and Furniture Design",
       "location": "Abuja, Nigeria",
       "image": "images/portfolio/Interior 1x.jpg",
-      "description": "Budget Centric Interior Design and Render",
       "alt_text": "Budget-conscious interior design and furniture render, Abuja interior designer",
+      "description": "Budget Centric Interior Design and Render",
       "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
       "gallery": [
         {
@@ -113,13 +33,93 @@
       ]
     },
     {
-      "slug": "villa-q-curb-appeal",
+      "title": "4 Bedroom Luxury Chalet, Abuja",
+      "slug": "4-bedroom-luxury-chalet-abuja",
+      "category": "Architectural Design and Visualization",
+      "location": "Abuja, Nigeria",
+      "image": "images/portfolio/gallery/CHalet type two Night.jpg",
+      "alt_text": "4 bedroom luxury chalet facade design and 3D architectural render, Abuja, night view",
+      "description": "A 4 Bedroom Chalet, Facade Design, and 3D render.",
+      "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
+      "gallery": [
+        {
+          "image": "images/portfolio/gallery/Chalet Type 2 I.png",
+          "alt_text": "4 bedroom luxury chalet facade design and 3D architectural render, Abuja, night view"
+        }
+      ]
+    },
+    {
+      "title": "Villa QAG",
+      "slug": "villa-qag-jabi-lake",
+      "category": "Architectural Design and Visualization",
+      "location": "Jabi Lake, Abuja",
+      "image": "images/portfolio/Pram Pram.jpg",
+      "alt_text": "Villa QAG residential complex architectural design, Jabi Lake, Abuja",
+      "description": "A residential complex development by the Jabi Lake.",
+      "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
+      "gallery": [
+        {
+          "image": "images/portfolio/gallery/QAG Villa 2x.jpg",
+          "alt_text": "Villa QAG residential complex architectural design, Jabi Lake, Abuja"
+        }
+      ]
+    },
+    {
+      "title": "Apartment QAG",
+      "slug": "apartment-qag-jabi-lake",
+      "category": "Architectural Visualization",
+      "location": "Jabi Lake, Abuja",
+      "image": "images/portfolio/Apartment JAbi Lake.png",
+      "alt_text": "Apartment building 3D visualization along Jabi Lake, Abuja, Nigeria",
+      "description": "Apartment Building Visualisation along Jabi Lake",
+      "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
+      "gallery": [
+        {
+          "image": "images/portfolio/gallery/Apartment 4 .jpg",
+          "alt_text": "Apartment building 3D visualization along Jabi Lake, Abuja, Nigeria"
+        }
+      ]
+    },
+    {
+      "title": "5 Bedroom Private Home",
+      "slug": "5-bedroom-private-home-kaduna",
+      "category": "Architectural Design",
+      "location": "Kaduna State, Nigeria",
+      "image": "images/portfolio/5 Bed 1x.png",
+      "alt_text": "5 bedroom private family home architectural design, Kaduna State, Nigeria",
+      "description": "A 5 Bedroom Family home, currently under construction in Kaduna state.",
+      "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
+      "gallery": [
+        {
+          "image": "images/portfolio/gallery/5 Bed.png",
+          "alt_text": "5 bedroom private family home architectural design, Kaduna State, Nigeria"
+        }
+      ]
+    },
+    {
+      "title": "Nagwamatse Villa",
+      "slug": "nagwamatse-villa",
+      "category": "Architectural Consultancy",
+      "location": "Nigeria",
+      "image": "images/portfolio/Mayn Mockup 1x.jpg",
+      "alt_text": "Nagwamatse Villa residential design and construction supervision, Nigeria",
+      "description": "Residential Design, Visualization and Construction Supervision.",
+      "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
+      "gallery": [
+        {
+          "image": "images/portfolio/gallery/Nagwamatse Villa 2x.jpg",
+          "alt_text": "Nagwamatse Villa residential design and construction supervision, Nigeria"
+        }
+      ]
+    },
+    {
       "title": "Villa Q",
+      "slug": "villa-q-curb-appeal",
       "category": "Curb Appeal and Architectural Visualization",
       "location": "Nigeria",
       "image": "images/portfolio/Kitchen 2.png",
-      "description": "Curb Appeal Design and Architectural Visualization",
       "alt_text": "Villa Q kitchen interior and curb appeal architectural visualization",
+      "description": "Curb Appeal Design and Architectural Visualization",
       "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
       "gallery": [
         {
@@ -129,13 +129,13 @@
       ]
     },
     {
-      "slug": "chalet-q-landscaping",
       "title": "Chalet Q",
+      "slug": "chalet-q-landscaping",
       "category": "Architectural Visualisation and Landscaping",
       "location": "Nigeria",
       "image": "images/portfolio/Chalet Type 1 small - Copy.png",
-      "description": "Selection of paint finishes, landscape elements and Architectural Visualization",
       "alt_text": "Chalet Q architectural visualization with landscaping and paint finish selection",
+      "description": "Selection of paint finishes, landscape elements and Architectural Visualization",
       "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
       "gallery": [
         {
@@ -145,13 +145,13 @@
       ]
     },
     {
-      "slug": "luxury-villa-maitama",
       "title": "Luxury Villa, Maitama, Abuja",
+      "slug": "luxury-villa-maitama",
       "category": "Architectural Design and Visualization",
       "location": "Maitama, Abuja",
       "image": "images/portfolio/Place 3 Villa 2x.jpg",
-      "description": "Curb Appeal Design and Architectural Visualization",
       "alt_text": "Maitama Villa curb appeal and architectural visualization, Maitama, Abuja",
+      "description": "Curb Appeal Design and Architectural Visualization",
       "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
       "gallery": [
         {
@@ -161,13 +161,13 @@
       ]
     },
     {
-      "slug": "lakeside-commercial-hub-jabi",
       "title": "Lakeside Commercial Hub, Jabi Lake, Abuja",
+      "slug": "lakeside-commercial-hub-jabi",
       "category": "Facade Development and Architectural Visualisation",
       "location": "Jabi Lake, Abuja",
       "image": "images/portfolio/Image 4_1.jpg",
-      "description": "Facade Development, Landscaping and 3D Visualization for a Proposed Lakeside Commercial Development in Abuja",
       "alt_text": "Lakeside commercial development facade design and 3D visualization, Jabi Lake, Abuja",
+      "description": "Facade Development, Landscaping and 3D Visualization for a Proposed Lakeside Commercial Development in Abuja",
       "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
       "gallery": [
         {
@@ -177,13 +177,13 @@
       ]
     },
     {
-      "slug": "living-room-design-uk",
       "title": "Living Room Design",
+      "slug": "living-room-design-uk",
       "category": "Interior Design and Visualisation",
       "location": "United Kingdom",
       "image": "images/portfolio/Gemini_Generated_Image_jyw2gvjyw2gvjyw2-1.jpg",
-      "description": "Interior Design for a UK based firm.",
       "alt_text": "Living room interior design and visualization for a UK based client",
+      "description": "Interior Design for a UK based firm.",
       "write_up": "TODO: Add a longer write-up describing the brief, design approach, and outcome for this project.",
       "gallery": [
         {
