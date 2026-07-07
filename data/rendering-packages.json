@@ -1,8 +1,12 @@
 {
+  "heroImage": "",
+  "heroImageAlt": "",
   "categories": [
     {
       "id": "interior",
       "label": "Interior Renders",
+      "image": "",
+      "imageAlt": "",
       "tiers": [
         {
           "name": "Essential",
@@ -33,6 +37,8 @@
     {
       "id": "exterior",
       "label": "Exterior Renders",
+      "image": "",
+      "imageAlt": "",
       "tiers": [
         {
           "name": "Essential",

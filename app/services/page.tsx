@@ -29,6 +29,8 @@ type Tier = {
 type Category = {
   id: string
   label: string
+  image?: string
+  imageAlt?: string
   tiers: Tier[]
 }
 
@@ -40,7 +42,17 @@ type AddOn = {
 
 export default async function ServicesPricingPage() {
   const { services } = servicesData as { services: Service[] }
-  const { categories, addOns } = renderingPackages as { categories: Category[]; addOns: AddOn[] }
+  const {
+    categories,
+    addOns,
+    heroImage,
+    heroImageAlt,
+  } = renderingPackages as {
+    categories: Category[]
+    addOns: AddOn[]
+    heroImage?: string
+    heroImageAlt?: string
+  }
 
   const rate = await getUsdToNgnRate()
   const toNgn = (usd: number) => usd * rate
@@ -62,7 +74,7 @@ export default async function ServicesPricingPage() {
 
       {/* HEADER */}
       <header className="pt-40 pb-16 px-6 md:px-12 border-b border-zinc-200">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-12">
           <div className="lg:col-span-8">
             <p className="text-xs uppercase tracking-widest text-zinc-400 mb-6">
               Services &amp; Pricing
@@ -78,7 +90,7 @@ export default async function ServicesPricingPage() {
             </div>
             <div>
               <span className="text-zinc-300">Visualisation</span>
-              <span className="ml-3 text-black">Fixed Pricing</span>
+              <span className="ml-3 text-black">Priced in Naira</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-zinc-300">Contact</span>
@@ -86,6 +98,16 @@ export default async function ServicesPricingPage() {
             </div>
           </div>
         </div>
+
+        {heroImage && (
+          <div className="max-w-7xl mx-auto">
+            <img
+              src={heroImage}
+              alt={heroImageAlt || ''}
+              className="w-full h-[50vh] md:h-[60vh] object-cover"
+            />
+          </div>
+        )}
       </header>
 
       {/* SERVICES — unpriced, numbered list */}
@@ -133,6 +155,7 @@ export default async function ServicesPricingPage() {
             <p className="text-xs uppercase tracking-widest text-zinc-400">Visualisation Packages</p>
             <p className="text-sm font-light text-zinc-500 mt-4 max-w-xs">
               Fixed pricing, 3 rounds of revision included on every package.
+              Quoted in Naira; the USD figure is a reference conversion, updated daily.
             </p>
           </div>
           <div className="lg:col-span-8" />
@@ -142,6 +165,15 @@ export default async function ServicesPricingPage() {
           {categories.map((category) => (
             <div key={category.id}>
               <p className="text-xs uppercase tracking-widest text-zinc-400 mb-6">{category.label}</p>
+
+              {category.image && (
+                <img
+                  src={category.image}
+                  alt={category.imageAlt || ''}
+                  className="w-full h-[40vh] md:h-[45vh] object-cover mb-8"
+                />
+              )}
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-zinc-200">
                 {category.tiers.map((tier) => {
                   const ngnPrice = toNgn(tier.price)

@@ -190,6 +190,12 @@ content:
     path: data/rendering-packages.json
     format: json
     fields:
+      - name: heroImage
+        label: Header Image
+        type: image
+      - name: heroImageAlt
+        label: Header Image Alt Text (SEO)
+        type: string
       - name: categories
         label: Categories (e.g. Interior, Exterior)
         type: object
@@ -200,6 +206,12 @@ content:
             type: string
           - name: label
             label: "Display Label (e.g. Interior Renders)"
+            type: string
+          - name: image
+            label: Category Image
+            type: image
+          - name: imageAlt
+            label: Category Image Alt Text (SEO)
             type: string
           - name: tiers
             label: Tiers (prices in USD — NGN is calculated automatically)
