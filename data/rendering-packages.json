@@ -7,7 +7,7 @@
         {
           "name": "Essential",
           "renderCount": 2,
-          "bestFor": "Single room, bathroom, small space",
+          "bestFor": "Bathrooms, hallways, powder rooms, and other compact spaces.",
           "turnaround": "2–3 days",
           "price": 250,
           "revisionsIncluded": 3
@@ -15,7 +15,7 @@
         {
           "name": "Standard",
           "renderCount": 4,
-          "bestFor": "Bedroom, kitchen, living room",
+          "bestFor": "Bedrooms, Kitchens, Living rooms, Home offices, and other medium-sized spaces",
           "turnaround": "3–5 days",
           "price": 390,
           "revisionsIncluded": 3
@@ -23,7 +23,7 @@
         {
           "name": "Premium",
           "renderCount": 6,
-          "bestFor": "Full apartment, commercial space",
+          "bestFor": "Large spaces, Open-plan interiors, Commercial and Premium projects.",
           "turnaround": "5–7 days",
           "price": 600,
           "revisionsIncluded": 3
