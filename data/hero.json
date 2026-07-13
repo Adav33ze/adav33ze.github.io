@@ -1,5 +1,4 @@
 {
-  "mode": "single",
   "image": "images/portfolio/Chalet 12.png",
   "alt": "Architectural project by Abdulrahman",
   "slides": [
@@ -7,9 +6,5 @@
       "image": "images/portfolio/Chalet 12.png",
       "alt": "Architectural project by Abdulrahman"
     }
-  ],
-  "headline": "adavize  /ˌɑːdɑːˈviːzeɪ/  n.",
-  "subheadline": "\"bringer of fortune.\"",
-  "body": "Architecting Prosperity through Seamless Design and Expert Delivery.",
-  "location": "Based in Abuja. Available worldwide."
+  ]
 }
