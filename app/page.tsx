@@ -114,10 +114,10 @@ export default function Home() {
           />
         )}
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
         <div data-hero-content className="relative z-10 max-w-3xl">
           {/* Dictionary definition hero */}
-          <h1 className="font-display text-5xl md:text-8xl text-white font-light tracking-tight leading-none">
+          <h1 className="font-display text-5xl md:text-8xl text-white font-light tracking-tight leading-none drop-shadow-md">
             adavize
           </h1>
           <p className="font-body text-base md:text-2xl text-zinc-300 tracking-wide font-light mt-3 mb-6">

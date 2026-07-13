@@ -12,25 +12,6 @@ export default function HeroSection() {
 
   useEffect(() => {
     if (typeof window !== 'undefined' && heroRef.current) {
-      // Get the hero element
-      const hero = heroRef.current;
-      
-      // Create timeline for hero animations
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: hero,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1
-        }
-      });
-      
-      // Animate background position on scroll
-      tl.to(hero, {
-        backgroundPosition: 'center 20%',
-        duration: 2
-      });
-
       // Animate headline
       gsap.from(headlineRef.current, {
         y: 50,
@@ -74,7 +55,7 @@ export default function HeroSection() {
       style={{
         background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero-bg.jpg')`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center center',
+        backgroundPosition: 'center 30%',
         backgroundAttachment: 'fixed'
       }}
     >

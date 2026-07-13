@@ -24,10 +24,8 @@ export default function ScrollMotion() {
 
         gsap.fromTo(hero.querySelectorAll('img, video'), {
           yPercent: -3,
-          scale: 1.16,
         }, {
           yPercent: 0,
-          scale: 1,
           ease: 'none',
           scrollTrigger: {
             trigger: hero,
