@@ -45,7 +45,7 @@ export default function Home() {
       <NavBar heroGradient />
 
       {/* HERO */}
-      <section className="relative h-screen w-full bg-black flex items-end p-6 md:p-12 overflow-hidden">
+      <section data-motion-hero className="relative h-screen w-full bg-black flex items-end p-6 md:p-12 overflow-hidden">
 
         {isSlideshow ? (
           /* SLIDESHOW HERO */
@@ -101,7 +101,7 @@ export default function Home() {
         )}
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-        <div className="relative z-10 max-w-3xl">
+        <div data-hero-content className="relative z-10 max-w-3xl">
           {/* Dictionary definition hero */}
           <h1 className="font-display text-5xl md:text-8xl text-white font-light tracking-tight leading-none">
             adavize
@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* SELECTED WORK */}
-      <section id="work" className="py-24 px-6 md:px-12 bg-white">
+      <section id="work" data-motion-section className="py-24 px-6 md:px-12 bg-white">
         <div className="mb-16 flex justify-between items-end">
           <div>
             <p className="text-xs uppercase tracking-widest text-zinc-400 mb-2">Selected Work</p>
@@ -154,12 +154,15 @@ export default function Home() {
             <Link
               href={`/work/${project.slug}`}
               key={index}
+              data-motion-card
               className="group flex flex-col"
             >
               <div className="relative aspect-[3/2] w-full bg-zinc-100 overflow-hidden mb-6 transition-shadow duration-700 ease-out group-hover:shadow-2xl group-hover:-translate-y-1">
                 <img
                   src={`/${project.image}`}
                   alt={project.alt_text}
+                  data-motion-image
+                  data-motion-zoom="strong"
                   className="folio-img w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>
@@ -194,7 +197,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-32 px-6 md:px-12 bg-zinc-50 border-t border-zinc-200">
+      <section id="about" data-motion-section className="py-32 px-6 md:px-12 bg-zinc-50 border-t border-zinc-200">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7 max-w-2xl">
             <p className="text-xs uppercase tracking-widest text-zinc-400 mb-6">About</p>
@@ -226,7 +229,7 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-5 w-full flex justify-end">
-            <div className="relative aspect-square w-full max-w-md bg-zinc-200 overflow-hidden grayscale contrast-115 shadow-2xl border border-zinc-300">
+            <div data-motion-slide className="relative aspect-square w-full max-w-md bg-zinc-200 overflow-hidden grayscale contrast-115 shadow-2xl border border-zinc-300">
               <img
                 src={profileData.image.startsWith('/') ? profileData.image : `/${profileData.image}`}
                 alt={profileData.alt}
@@ -239,14 +242,14 @@ export default function Home() {
 
       {/* TESTIMONIALS */}
       {testimonials && testimonials.length > 0 && (
-        <section className="py-24 px-6 md:px-12 bg-white border-t border-zinc-200">
+        <section data-motion-section className="py-24 px-6 md:px-12 bg-white border-t border-zinc-200">
           <div className="mb-16">
             <p className="text-xs uppercase tracking-widest text-zinc-400 mb-2">Clients</p>
             <h2 className="font-display text-4xl font-light">What they say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
             {testimonials.map((t: any, i: number) => (
-              <div key={i} className="flex flex-col justify-between border-t border-zinc-200 pt-8">
+              <div key={i} data-motion-card className="flex flex-col justify-between border-t border-zinc-200 pt-8">
                 <blockquote className="font-display text-xl md:text-2xl font-light leading-relaxed text-zinc-800 mb-8">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
@@ -265,7 +268,7 @@ export default function Home() {
 
       {/* JOURNAL PREVIEW */}
       {posts && posts.length > 0 && (
-        <section className="py-24 px-6 md:px-12 border-t border-zinc-200">
+        <section data-motion-section className="py-24 px-6 md:px-12 border-t border-zinc-200">
           <div className="mb-12 flex justify-between items-end">
             <div>
               <p className="text-xs uppercase tracking-widest text-zinc-400 mb-2">Writing</p>
@@ -283,6 +286,7 @@ export default function Home() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
+                data-motion-card
                 className="group flex flex-col md:flex-row md:items-start md:gap-16 py-8 transition-colors"
               >
                 <span className="text-xs uppercase tracking-widest text-zinc-400 md:w-32 shrink-0 mb-2 md:mb-0">
