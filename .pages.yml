@@ -18,22 +18,55 @@ content:
             value: single
           - label: Slideshow
             value: slideshow
+          - label: Video
+            value: video
       - name: image
         label: Single Image (used when mode is Single Image)
         type: image
       - name: alt
         label: Single Image Alt Text
         type: string
+      - name: video
+        label: Video (used when mode is Video)
+        type: file
+        options:
+          accept: "video/mp4,video/webm,video/quicktime"
+          input: public/videos/hero
+          output: videos/hero
+      - name: videoPoster
+        label: "Video Poster / Fallback Image (shown while video loads, or on unsupported devices)"
+        type: image
+      - name: videoAlt
+        label: Video Alt / Description Text
+        type: string
       - name: slides
-        label: Slideshow Images (used when mode is Slideshow)
+        label: Slideshow Slides (used when mode is Slideshow)
         type: object
         list: true
         fields:
+          - name: mediaType
+            label: Slide Type
+            type: select
+            options:
+              - label: Image
+                value: image
+              - label: Video
+                value: video
           - name: image
-            label: Image
+            label: "Image (used when Slide Type is Image)"
+            type: image
+          - name: video
+            label: "Video (used when Slide Type is Video)"
+            type: file
+            options:
+              accept: "video/mp4,video/webm,video/quicktime"
+              input: public/videos/hero
+              output: videos/hero
+          - name: videoPoster
+            label: "Video Poster (used when Slide Type is Video)"
             type: image
           - name: alt
-            label: Alt Text
+            label: Alt / Description Text
             type: string
 
   - name: profile
@@ -85,12 +118,30 @@ content:
             label: Project Write-up (shown on project page)
             type: text
           - name: gallery
-            label: Gallery Images
+            label: Gallery (Images & Videos)
             type: object
             list: true
             fields:
+              - name: mediaType
+                label: Media Type
+                type: select
+                options:
+                  - label: Image
+                    value: image
+                  - label: Video
+                    value: video
               - name: image
-                label: Image
+                label: "Image (used when Media Type is Image)"
+                type: image
+              - name: video
+                label: "Video (used when Media Type is Video, e.g. walkthrough animations)"
+                type: file
+                options:
+                  accept: "video/mp4,video/webm,video/quicktime"
+                  input: public/videos/portfolio
+                  output: videos/portfolio
+              - name: videoPoster
+                label: "Video Poster / Thumbnail (used when Media Type is Video)"
                 type: image
               - name: alt_text
                 label: Alt Text (SEO)
