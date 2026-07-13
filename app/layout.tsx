@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
-import ScrollMotion from './components/ScrollMotion'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,7 +26,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth overflow-x-hidden" suppressHydrationWarning>
       <body className={`${inter.variable} ${cormorant.variable} antialiased bg-white text-black overflow-x-hidden`}>
-        <ScrollMotion />
         {children}
       </body>
     </html>

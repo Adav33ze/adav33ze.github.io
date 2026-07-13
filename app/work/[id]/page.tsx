@@ -60,7 +60,7 @@ export default async function ProjectPage({ params }: PageProps) {
       <NavBar forceLight />
 
       {/* HERO */}
-      <section data-motion-hero className="relative h-[88vh] w-full bg-zinc-900 overflow-hidden flex items-end p-6 md:p-12">
+      <section className="relative h-[88vh] w-full bg-zinc-900 overflow-hidden flex items-end p-6 md:p-12">
         <Image
           src={`/${project.image}`}
           alt={project.alt_text}
@@ -70,7 +70,7 @@ export default async function ProjectPage({ params }: PageProps) {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-        <div data-hero-content className="relative z-10 max-w-4xl text-white">
+        <div className="relative z-10 max-w-4xl text-white">
           <p className="text-xs uppercase tracking-widest text-zinc-400 mb-3">{project.location}</p>
           {/* FIX: text-3xl base (was text-4xl) — project names can be long */}
           <h1 className="font-display text-3xl md:text-7xl font-light tracking-tight">
@@ -123,7 +123,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
       {/* GALLERY */}
       {project.gallery && project.gallery.length > 0 && (
-        <section data-motion-section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
           <h2 className="text-xs uppercase tracking-widest text-zinc-400 mb-12 border-t border-zinc-200 pt-8">
             Project Images
           </h2>
@@ -131,15 +131,12 @@ export default async function ProjectPage({ params }: PageProps) {
             {project.gallery.map((item: any, i: number) => (
               <div
                 key={i}
-                data-motion-card
                 className="relative w-full overflow-hidden bg-zinc-100"
                 style={{ aspectRatio: i % 3 === 1 ? '16/9' : '3/2' }}
               >
                 <Image
                   src={`/${item.image}`}
                   alt={item.alt_text}
-                  data-motion-image
-                  data-motion-zoom="strong"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1280px"
