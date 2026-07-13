@@ -22,7 +22,7 @@ export default function ScrollMotion() {
           { y: 0, autoAlpha: 1, duration: 0.58, stagger: 0.07, ease: 'power3.out', delay: 0.05 }
         )
 
-        gsap.fromTo(hero.querySelectorAll('img'), {
+        gsap.fromTo(hero.querySelectorAll('img, video'), {
           yPercent: -3,
           scale: 1.16,
         }, {

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import gsap from 'gsap'
 
 interface NavBarProps {
   forceLight?: boolean
@@ -21,26 +20,6 @@ export default function NavBar({ forceLight = false, heroGradient = false }: Nav
 
   const isLight = forceLight || scrolled
 
-  useEffect(() => {
-    if (scrolled) {
-      gsap.to('.nav-container', {
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        backdropFilter: 'blur(10px)',
-        borderColor: '#e5e7eb',
-        duration: 0.5,
-        ease: 'power2.out'
-      })
-    } else {
-      gsap.to('.nav-container', {
-        backgroundColor: 'transparent',
-        backdropFilter: 'none',
-        borderColor: 'transparent',
-        duration: 0.5,
-        ease: 'power2.out'
-      })
-    }
-  }, [scrolled])
-
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
       {heroGradient && !scrolled && (
@@ -51,7 +30,7 @@ export default function NavBar({ forceLight = false, heroGradient = false }: Nav
         className={`
           relative flex justify-between items-center
           px-4 py-5 md:px-12 md:py-6
-          transition-all duration-300 ease-in-out nav-container
+          transition-all duration-300 ease-in-out
           ${isLight
             ? 'bg-white/80 backdrop-blur-md border-b border-zinc-100 shadow-sm'
             : 'bg-transparent border-b border-transparent'

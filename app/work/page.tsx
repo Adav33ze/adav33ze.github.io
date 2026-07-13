@@ -16,7 +16,7 @@ export default function WorkPage() {
       <NavBar forceLight />
 
       {/* HEADER */}
-      <header className="pt-40 pb-16 px-6 md:px-12 border-b border-zinc-200">
+      <header data-motion-section className="pt-40 pb-16 px-6 md:px-12 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs uppercase tracking-widest text-zinc-400 mb-4">Work</p>
           {/* FIX: text-4xl base (was text-5xl) */}
@@ -36,12 +36,15 @@ export default function WorkPage() {
             <Link
               href={`/work/${project.slug}`}
               key={index}
+              data-motion-card
               className="group flex flex-col"
             >
               <div className="relative aspect-[3/2] w-full bg-zinc-100 overflow-hidden mb-6 transition-shadow duration-700 ease-out group-hover:shadow-2xl group-hover:-translate-y-1">
                 <img
                   src={`/${project.image}`}
                   alt={project.alt_text}
+                  data-motion-image
+                  data-motion-zoom="strong"
                   className="folio-img w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>
