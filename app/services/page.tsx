@@ -90,7 +90,7 @@ export default async function ServicesPricingPage() {
             </div>
             <div>
               <span className="text-zinc-300">Visualisation</span>
-              <span className="ml-3 text-black">Priced in Naira</span>
+              <span className="ml-3 text-black">Fixed Pricing</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-zinc-300">Contact</span>
