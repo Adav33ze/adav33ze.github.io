@@ -13,6 +13,8 @@ content:
       - name: mode
         label: Hero Mode
         type: select
+        default: single
+        required: true
         options:
           - label: Single Image
             value: single

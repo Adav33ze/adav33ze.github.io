@@ -12,6 +12,21 @@ export const metadata = {
   description: 'Abdulrahman is an Architect and Interior Designer based in Abuja, Nigeria, working across residential, hospitality, and institutional projects locally and internationally.',
 }
 
+// Shape of hero.json as managed through the CMS (data/hero.json).
+// Fields are optional here because the CMS does not guarantee every
+// field will be present on every save — treat this as untrusted input.
+interface HeroData {
+  mode: 'single' | 'slideshow' | 'video'
+  image: string
+  video?: string
+  alt: string
+  slides: { image: string; alt: string }[]
+  headline?: string
+  subheadline?: string
+  body?: string
+  location?: string
+}
+
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('en-GB', {
     month: 'short',
@@ -25,19 +40,25 @@ export default function Home() {
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   )
   const testimonials = testimonialsData.testimonials
-  const hero = heroData as {
-    mode: 'single' | 'slideshow' | 'video'
-    image: string
-    video?: string
-    alt: string
-    slides: { image: string; alt: string }[]
-    headline?: string
-    subheadline?: string
-    body?: string
-    location?: string
+
+  // Defensive hero parsing: if the CMS ever saves hero.json without a
+  // `mode` (or with any other field missing), fall back to sane
+  // defaults instead of failing the production build or crashing at
+  // runtime. Never trust CMS-managed JSON to fully match the interface.
+  const rawHero = heroData as Partial<HeroData>
+  const hero: HeroData = {
+    mode: rawHero.mode ?? 'single',
+    image: rawHero.image ?? '',
+    alt: rawHero.alt ?? '',
+    slides: rawHero.slides ?? [],
+    video: rawHero.video,
+    headline: rawHero.headline,
+    subheadline: rawHero.subheadline,
+    body: rawHero.body,
+    location: rawHero.location,
   }
 
-  const isSlideshow = hero.mode === 'slideshow' && hero.slides && hero.slides.length > 1
+  const isSlideshow = hero.mode === 'slideshow' && hero.slides.length > 1
   const isVideo = hero.mode === 'video' && Boolean(hero.video)
 
   return (
